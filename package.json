@@ -1,6 +1,7 @@
 {
   "name": "component-library",
   "version": "0.1.0",
+  "description": "Library of re-usable components for Endpoint projects",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
