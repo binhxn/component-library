@@ -1,3 +1,9 @@
+## Features
+
+- `styled-components`
+- `styled-systems`
+- `react-styleguidist` for component style guide
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -10,6 +16,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `yarn guide`
 
 Runs Styleguidist server for component library with style guide
+
+Open [http://localhost:6060](http://localhost:6060) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.

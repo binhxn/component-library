@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { typography } from 'styled-system';
+import { typography, space } from 'styled-system';
 
 const StyledButton = styled.button`
   font-size: 12px;
@@ -10,42 +11,64 @@ const StyledButton = styled.button`
   padding: 0.5rem 0;
   margin: 0.5rem 1rem;
   width: 11rem;
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+  background: white;
+  color: palevioletred;
+  border: 1px solid palevioletred;
   transition: ease-in-out 0.2s;
 
   ${typography}
+  ${space}
 
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 
-  &:active {
-    opacity: .3;
-  }
+  /* &:active {
+    opacity: 0.3;
+  } */
 
-  /* The GitHub button is a primary button
+  /* /* The GitHub button is a primary button
    * edit this to target it specifically! */
   ${props =>
     props.primary &&
     css`
-      background: white;
-      color: palevioletred;
+      background: palevioletred;
+      border: none;
+      color: white;
     `}
-
-  padding: ${props => props.gutter}px;
 `;
 
-StyledButton.propTypes = {
-  ...typography.propTypes
-};
+// Figure out variant
+// const Button = styled('button')(
+//   {
+//     appearance: 'none',
+//     fontFamily: 'inherit',
+//   },
+//   variant({
+//     variants: {
+//       primary: {
+//         color: 'white',
+//         bg: 'primary',
+//       },
+//       secondary: {
+//         color: 'white',
+//         bg: 'secondary',
+//       },
+//     }
+//   })
+// )
 
 export default class Button extends Component {
+  static propTypes = {
+    /** type of Button */
+    type: PropTypes.string,
+    ...typography.propTypes
+  };
+
   render() {
     return (
-      <StyledButton primary gutter={10} type='button' fontSize={20}>
-        Hello
+      <StyledButton {...this.props} type='button'>
+        {this.props.children}
       </StyledButton>
     );
   }
