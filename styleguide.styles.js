@@ -25,6 +25,15 @@ const colors = {
     doveGrey: '#C5C5C5',
     cloud: '#F0F0F0'
   },
+  code: {
+    func: '#fac863',
+    keyword: '#c594c5',
+    background: '#1b2b34',
+    comment: '#65737e',
+    operator: '5fb3b3',
+    string: '#99c794',
+    punctuation: '#5fb3b3'
+  },
   light: '#fff',
   dark: '#000',
   grey: '#7a898f',
@@ -34,12 +43,16 @@ const colors = {
   danger: '#d9534f'
 };
 
+const {
+  code: { func, keyword, background, comment, operator, string, punctuation }
+} = colors;
+
 // Styleguidist theme
 const theme = {
   color: {
     baseBackground: colors.light,
     border: colors.paleGrey,
-    codeBackground: colors.paleGrey,
+    // codeBackground: colors.paleGrey,
     error: colors.danger,
     light: colors.grey,
     lightest: colors.lightGrey,
@@ -48,12 +61,25 @@ const theme = {
     base: colors.dark,
     link: colors.primary.endpointBlue,
     linkHover: colors.tertiary,
-    sidebarBackground: colors.primary.endpointBlue
+    sidebarBackground: colors.primary.endpointBlue,
+    /* Customized editor styles */
+    codeBackground: background,
+    codeProperty: 'red', // not working
+    codeVariable: 'red', // not working
+    codeFunction: func,
+    codeString: string,
+    codeBase: colors.light,
+    codeComment: comment,
+    codeOperator: operator,
+    codeKeyword: keyword, // function, export, default, class, extends keywords
+    codeInserted: 'red', // not working
+    codeDeleted: 'red', // not working
+    codePunctuation: punctuation
   },
   fontFamily: {
     base:
       '"proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-    monospace: 'Consolas, "Liberation Mono", Menlo, monospace'
+    monospace: 'dm, Consolas, "Liberation Mono", Menlo, monospace'
   },
   fontSize: {
     base: 15,

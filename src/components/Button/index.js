@@ -61,17 +61,17 @@ const StyledButton = styled.button`
 // )
 
 export default class Button extends Component {
-  static propTypes = {
-    /** type of Button */
-    type: PropTypes.string,
-    ...typography.propTypes
-  };
-
   render() {
     return (
-      <StyledButton {...this.props} type='button'>
+      <StyledButton {...this.props} type={this.props.type}>
         {this.props.children}
       </StyledButton>
     );
   }
 }
+
+Button.propTypes = {
+  /** type of Button */
+  type: PropTypes.string.isRequired,
+  ...typography.propTypes
+};

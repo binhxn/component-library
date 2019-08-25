@@ -10,7 +10,7 @@ module.exports = {
   styles,
   theme,
   template: {
-    favicon: './public/endpoint-favicon.png'
+    favicon: './assets/endpoint-favicon.png'
   },
   getComponentPathLine: componentPath => {
     const dirname = path.dirname(componentPath, '.js');
