@@ -19,11 +19,14 @@ const colors = {
     smoke: '#A2A2A2',
     doveGrey: '#C5C5C5',
     cloud: '#F0F0F0'
-  }
+  },
+  white: '#fff',
+  black: '#000'
 };
 
 const {
-  primary: { endpointBlue }
+  primary: { endpointBlue, turquoise },
+  white
   // code: { func, keyword, background, comment, operator, string, punctuation }
 } = colors;
 
@@ -50,14 +53,13 @@ const {
 export default {
   border: {
     primary: `1px solid ${endpointBlue}`,
-    secondary: '1px solid #ccc'
+    secondary: `1px solid ${turquoise}`
   },
   bg: {
     primary: endpointBlue,
-    secondary: '#ccc'
+    secondary: turquoise
   },
   breakpoints: [32, 48, 64],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
@@ -73,7 +75,7 @@ export default {
     text: '#000',
     background: '#fff',
     primary: endpointBlue,
-    secondary: '#ccc',
+    secondary: turquoise,
     modes: {
       //
       dark: {
@@ -97,10 +99,30 @@ export default {
     tight: '-0.05em',
     mega: '0.25em'
   },
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   radii: [0, 2, 4, 16, 9999, '100%'],
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
-  maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
+  maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],
+  /* Variants */
+  /* Move into separate file later */
+  buttons: {
+    primary: {
+      color: white,
+      bg: 'primary',
+      border: 'none'
+    },
+    secondary: {
+      color: white,
+      bg: 'secondary',
+      border: 'none'
+    }
+  },
+  buttonSize: {
+    small: 0,
+    medium: 1,
+    large: 2
+  }
   // not being applied as base styles for some reason in markdown file
   // styles: {
   //   h1: {

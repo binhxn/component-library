@@ -1,35 +1,25 @@
 Button component example:
 
 ```js
-<Button primary type='button'>
-  Push Me 1
+<Button variant='primary' buttonSize="small" type='button'>
+  Primary small
+</Button>
+<Button variant='primary' buttonSize="medium" type='button'>
+  Primary medium
+</Button>
+<Button variant='primary' buttonSize="large" type='button'>
+  Primary large
 </Button>
 ```
 
 ```js
-<Button primary fontSize={20} type='button'>
-  Push Me 2
+<Button variant='secondary' buttonSize="small" type='button'>
+  Secondary small
 </Button>
-```
-
-```js
-<Button type='button'>Push Me 3</Button>
-```
-
-```js
-<Button fontSize={20} type='button'>
-  Push Me 4
+<Button variant='secondary' buttonSize="medium" type='button'>
+  Secondary medium
 </Button>
-```
-
-```js
-<Button primary p={10} type='button'>
-  Push Me 5
-</Button>
-```
-
-```js
-<Button primary p={20} type='button'>
-  Push Me 6
+<Button variant='secondary' buttonSize="large" type='button'>
+  Secondary large
 </Button>
 ```
