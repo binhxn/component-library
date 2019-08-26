@@ -25,7 +25,7 @@ module.exports = {
   },
   sections: [
     {
-      name: '',
+      name: 'Getting Started',
       content: 'src/components/Readme.md'
     },
     {

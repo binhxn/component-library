@@ -34,16 +34,16 @@ const {
 //   monospace: 'Menlo, monospace'
 // };
 
-const heading = {
-  fontFamily: 'heading',
-  // lineHeight: 'heading', // not defined in lineHeight values, only solid, title, and copy
-  fontWeight: 'heading'
-};
+// const heading = {
+//   fontFamily: 'heading',
+//   // lineHeight: 'heading', // not defined in lineHeight values, only solid, title, and copy
+//   fontWeight: 'heading'
+// };
 
-const body = {
-  fontFamily: 'body',
-  fontWeight: 'body'
-};
+// const body = {
+//   fontFamily: 'body',
+//   fontWeight: 'body'
+// };
 
 /* Main Theme */
 
@@ -105,19 +105,19 @@ export default {
   // styles: {
   //   h1: {
   //     ...heading,
-  //     fontSize: 5
+  //     fontSize: [5, 4]
   //   },
   //   h2: {
   //     ...heading,
-  //     fontSize: 4
+  //     fontSize: [4, 3]
   //   },
   //   h3: {
   //     ...heading,
-  //     fontSize: 3
+  //     fontSize: [3, 2]
   //   },
   //   h4: {
   //     ...heading,
-  //     fontSize: 2
+  //     fontSize: [2, 1]
   //   },
   //   p: {
   //     ...body,
