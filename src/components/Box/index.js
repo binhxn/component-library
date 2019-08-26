@@ -6,10 +6,11 @@ export const Box = props => (
   <div
     {...props}
     sx={{
+      fontFamily: 'body',
       fontWeight: 'bold',
       fontSize: 4, // picks up value from `theme.fontSizes[4]`
-      color: 'primary', // picks up value from `theme.colors.primary`
-      border: 'primary', // picks up value from `theme.border.primary`
+      // color: 'primary', // picks up value from `theme.colors.primary`
+      // border: 'primary', // picks up value from `theme.border.primary`
       // bg: 'secondary', // picks up value from `theme.bg.secondary`
       borderRadius: 2, // picks up value from `theme.radii[2]`
       radii: 2,

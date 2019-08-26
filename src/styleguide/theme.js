@@ -1,31 +1,95 @@
+/* Colors */
+const colors = {
+  primary: {
+    carbon: '#222222',
+    slateGrey: '#383E54',
+    endpointBlue: '#0084B4',
+    turquoise: '#00A7B4',
+    paleGrey: '#F4F5F7'
+  },
+  secondary: {
+    watermelon: '#ED5564',
+    tangerine: '#F46600',
+    marigold: '#ED9E00',
+    aloe: '#69C423',
+    aqua: '#00BBB7',
+    mist: '#C2CED7',
+    air: '#E5F2F7',
+    stone: '#858585',
+    smoke: '#A2A2A2',
+    doveGrey: '#C5C5C5',
+    cloud: '#F0F0F0'
+  }
+};
+
+const {
+  primary: { endpointBlue }
+  // code: { func, keyword, background, comment, operator, string, punctuation }
+} = colors;
+
+/* Typography */
+// const fonts = {
+//   body: 'system-ui, sans-serif',
+//   heading: '"Avenir Next", sans-serif',
+//   monospace: 'Menlo, monospace'
+// };
+
+const heading = {
+  fontFamily: 'heading',
+  // lineHeight: 'heading', // not defined in lineHeight values, only solid, title, and copy
+  fontWeight: 'heading'
+};
+
+const body = {
+  fontFamily: 'body',
+  fontWeight: 'body'
+};
+
+/* Main Theme */
+
 export default {
   border: {
-    primary: '1px solid #33e',
+    primary: `1px solid ${endpointBlue}`,
     secondary: '1px solid #ccc'
   },
   bg: {
-    primary: '#33e',
+    primary: endpointBlue,
     secondary: '#ccc'
   },
   breakpoints: [32, 48, 64],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  fontSizes: [12, 14, 16, 20, 24, 36, 48, 80, 96],
-  fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   fonts: {
     body: 'system-ui, sans-serif',
-    heading: '"Avenir Next", sans-serif',
+    heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace'
+  },
+  fontSizes: [12, 14, 16, 18, 22, 36, 48, 64],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700
   },
   colors: {
     text: '#000',
     background: '#fff',
-    primary: '#33e',
-    secondary: '#ccc'
+    primary: endpointBlue,
+    secondary: '#ccc',
+    modes: {
+      //
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#0cf',
+        secondary: '#f0e',
+        gray: '#222',
+        lightgray: '#111'
+      }
+    }
   },
   lineHeights: {
     solid: 1,
-    title: 1.25,
-    copy: 1.5
+    heading: 1.25,
+    body: 1.5
   },
   letterSpacings: {
     normal: 'normal',
@@ -37,4 +101,27 @@ export default {
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
+  // not being applied as base styles for some reason in markdown file
+  // styles: {
+  //   h1: {
+  //     ...heading,
+  //     fontSize: 5
+  //   },
+  //   h2: {
+  //     ...heading,
+  //     fontSize: 4
+  //   },
+  //   h3: {
+  //     ...heading,
+  //     fontSize: 3
+  //   },
+  //   h4: {
+  //     ...heading,
+  //     fontSize: 2
+  //   },
+  //   p: {
+  //     ...body,
+  //     fontSize: 1
+  //   }
+  // }
 };

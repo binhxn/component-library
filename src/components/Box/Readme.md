@@ -1,5 +1,5 @@
 Box component example:
 
 ```js
-<Box>Boxxxxx</Box>
+<Box>Box Component</Box>
 ```

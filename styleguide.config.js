@@ -34,13 +34,13 @@ module.exports = {
         path.resolve(__dirname, 'src/components/Box', 'index.js'),
         path.resolve(__dirname, 'src/components/Button', 'index.js')
       ]
+    },
+    {
+      // Displays sub-section without component and only readme
+      name: 'Theme',
+      sections: [
+        { name: 'Typography', content: 'src/theme/typography/Readme.md' }
+      ]
     }
-    // TODO: Theming
-    // {
-    //   name: 'Theming',
-    //   components: () => ([
-    //     path.resolve(__dirname, 'src/components/theme', 'index.js')
-    //   ])
-    // },
   ]
 };
