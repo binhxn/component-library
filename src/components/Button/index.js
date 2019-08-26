@@ -1,77 +1,30 @@
-import React, { Component } from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { typography, space } from 'styled-system';
+export const Button = props => (
+  <button
+    sx={{
+      // applies width 100% to all viewport widths,
+      // width 50% above the first breakpoint,
+      // and 25% above the next breakpoint
+      width: ['100%', '50%', '25%']
+    }}
+  >
+    {props.children}
+  </button>
+);
 
-const primary = '#0084B4';
-
-const StyledButton = styled.button`
-  font-size: 12px;
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 3px;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 11rem;
-  background: white;
-  color: ${primary};
-  border: 1px solid ${primary};
-  transition: ease-in-out 0.2s;
-
-  ${typography}
-  ${space}
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  /* &:active {
-    opacity: 0.3;
-  } */
-
-  /* /* The GitHub button is a primary button
-   * edit this to target it specifically! */
-  ${props =>
-    props.primary &&
-    css`
-      background: ${primary};
-      border: none;
-      color: white;
-    `}
-`;
-
-// Figure out variant
-// const Button = styled('button')(
-//   {
-//     appearance: 'none',
-//     fontFamily: 'inherit',
-//   },
-//   variant({
-//     variants: {
-//       primary: {
-//         color: 'white',
-//         bg: 'primary',
-//       },
-//       secondary: {
-//         color: 'white',
-//         bg: 'secondary',
-//       },
-//     }
-//   })
-// )
-
-export default class Button extends Component {
-  render() {
-    return (
-      <StyledButton {...this.props} type={this.props.type}>
-        {this.props.children}
-      </StyledButton>
-    );
-  }
-}
+// export default class Button extends Component {
+//   render() {
+//     return (
+//       <StyledButton {...this.props} type={this.props.type}>
+//         {this.props.children}
+//       </StyledButton>
+//     );
+//   }
+// }
 
 Button.propTypes = {
   /** type of Button */
-  type: PropTypes.string.isRequired,
-  ...typography.propTypes
+  type: PropTypes.string.isRequired
 };
