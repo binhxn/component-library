@@ -20,7 +20,8 @@ module.exports = {
   },
   // pagePerSection: process.env.NODE_ENV !== 'production',
   styleguideComponents: {
-    Logo: path.join(__dirname, 'lib/components/Logo')
+    Logo: path.join(__dirname, 'lib/components/Logo'),
+    Wrapper: path.join(__dirname, 'src/styleguide/Wrapper')
   },
   sections: [
     {
@@ -30,6 +31,7 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
+        path.resolve(__dirname, 'src/components/Box', 'index.js'),
         path.resolve(__dirname, 'src/components/Button', 'index.js')
       ]
     }

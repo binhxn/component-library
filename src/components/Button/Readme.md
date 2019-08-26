@@ -1,31 +1,35 @@
-React component example:
+Button component example:
 
 ```js
-<Button primary>Push Me 1</Button>
+<Button primary type='button'>
+  Push Me 1
+</Button>
 ```
 
 ```js
-<Button primary fontSize={20}>
+<Button primary fontSize={20} type='button'>
   Push Me 2
 </Button>
 ```
 
 ```js
-<Button>Push Me 3</Button>
+<Button type='button'>Push Me 3</Button>
 ```
 
 ```js
-<Button fontSize={20}>Push Me 4</Button>
+<Button fontSize={20} type='button'>
+  Push Me 4
+</Button>
 ```
 
 ```js
-<Button primary p={10}>
+<Button primary p={10} type='button'>
   Push Me 5
 </Button>
 ```
 
 ```js
-<Button primary p={20}>
+<Button primary p={20} type='button'>
   Push Me 6
 </Button>
 ```

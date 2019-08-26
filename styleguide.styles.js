@@ -63,18 +63,18 @@ const theme = {
     linkHover: colors.tertiary,
     sidebarBackground: colors.primary.endpointBlue,
     /* Customized editor styles */
-    codeBackground: background,
-    codeProperty: 'red', // not working
-    codeVariable: 'red', // not working
-    codeFunction: func,
-    codeString: string,
     codeBase: colors.light,
+    codeBackground: background,
     codeComment: comment,
-    codeOperator: operator,
-    codeKeyword: keyword, // function, export, default, class, extends keywords
-    codeInserted: 'red', // not working
     codeDeleted: 'red', // not working
-    codePunctuation: punctuation
+    codeFunction: func,
+    codeInserted: 'red', // not working
+    codeKeyword: keyword, // function, export, default, class, extends keywords
+    codeOperator: operator,
+    codePunctuation: punctuation,
+    codeProperty: 'red', // not working
+    codeString: string,
+    codeVariable: 'red' // not working
   },
   fontFamily: {
     base:
