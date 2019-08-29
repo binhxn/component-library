@@ -25,7 +25,7 @@ const colors = {
 };
 
 const {
-  primary: { endpointBlue, turquoise },
+  primary: { endpointBlue, turquoise, slateGrey },
   white
   // code: { func, keyword, background, comment, operator, string, punctuation }
 } = colors;
@@ -53,13 +53,20 @@ const {
 export default {
   border: {
     primary: `1px solid ${endpointBlue}`,
-    secondary: `1px solid ${turquoise}`
+    secondary: `1px solid ${turquoise}`,
+    tertiary: `1px solid ${slateGrey}`
   },
   bg: {
     primary: endpointBlue,
     secondary: turquoise
   },
-  breakpoints: [32, 48, 64],
+  // breakpoints: ['32em', '48em', '64em'],
+  breakpoints: ['600px', '800px', '1000px'],
+  // breakpoints: {
+  //   sm: '32em',
+  //   md: '48em',
+  //   lg: '64em'
+  // },
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
@@ -73,13 +80,15 @@ export default {
   },
   colors: {
     text: '#000',
-    background: '#fff',
+    background: white,
+    white,
     primary: endpointBlue,
     secondary: turquoise,
+    tertiary: slateGrey,
     modes: {
       //
       dark: {
-        text: '#fff',
+        text: white,
         background: '#000',
         primary: '#0cf',
         secondary: '#f0e',
@@ -103,47 +112,37 @@ export default {
   radii: [0, 2, 4, 16, 9999, '100%'],
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
-  maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],
+  maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
   /* Variants */
   /* Move into separate file later */
-  buttons: {
-    primary: {
-      color: white,
-      bg: 'primary',
-      border: 'none'
-    },
-    secondary: {
-      color: white,
-      bg: 'secondary',
-      border: 'none'
-    }
-  },
-  buttonSize: {
-    small: 0,
-    medium: 1,
-    large: 2
-  }
-  // not being applied as base styles for some reason in markdown file
-  // styles: {
-  //   h1: {
-  //     ...heading,
-  //     fontSize: [5, 4]
+  // buttons: {
+  //   primary: {
+  //     color: white,
+  //     bg: 'primary',
+  //     border: 'none'
   //   },
-  //   h2: {
-  //     ...heading,
-  //     fontSize: [4, 3]
-  //   },
-  //   h3: {
-  //     ...heading,
-  //     fontSize: [3, 2]
-  //   },
-  //   h4: {
-  //     ...heading,
-  //     fontSize: [2, 1]
-  //   },
-  //   p: {
-  //     ...body,
-  //     fontSize: 1
+  //   secondary: {
+  //     color: white,
+  //     bg: 'secondary',
+  //     border: 'none'
   //   }
-  // }
+  // },
+  //   TODO: FIgure out how to theme with Button component
+  //   buttonSizes: {
+  //     small: {
+  //       fontSize: 1,
+  //       p: 1,
+  //       m: 1
+  //     },
+  //     medium: {
+  //       fontSize: 2,
+  //       p: 2,
+  //       m: 1
+  //     },
+  //     large: {
+  //       fontSize: 3,
+  //       p: 3,
+  //       m: 1
+  //     }
+  //   }
 };

@@ -1,27 +1,32 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+import styled from 'styled-components';
+import {
+  space,
+  layout,
+  color,
+  border,
+  typography,
+  flexbox
+  // theme
+} from 'styled-system';
 import PropTypes from 'prop-types';
 
-export const Box = props => (
-  <div
-    {...props}
-    sx={{
-      fontFamily: 'body',
-      fontWeight: 'bold',
-      fontSize: 4, // picks up value from `theme.fontSizes[4]`
-      // color: 'primary', // picks up value from `theme.colors.primary`
-      // border: 'primary', // picks up value from `theme.border.primary`
-      // bg: 'secondary', // picks up value from `theme.bg.secondary`
-      borderRadius: 2, // picks up value from `theme.radii[2]`
-      radii: 2,
-      padding: 3
-    }}
-  >
-    {props.children}
-  </div>
-);
+const Box = styled.div`
+  ${flexbox}
+  ${typography}
+  ${space}
+  ${layout}
+  ${color}
+  ${border}
+
+  /* font-family: ${theme.fontFamily.body}; */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+`;
 
 Box.propTypes = {
   /** type of theme */
   variant: PropTypes.string
 };
+
+/** @component */
+export default Box;

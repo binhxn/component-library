@@ -1,25 +1,45 @@
-Button component example:
+### Button variation:
 
 ```js
-<Button variant='primary' buttonSize="small" type='button'>
+<Button variant="primary" size="small">
   Primary small
 </Button>
-<Button variant='primary' buttonSize="medium" type='button'>
+<Button variant="primary" size="medium">
   Primary medium
 </Button>
-<Button variant='primary' buttonSize="large" type='button'>
+<Button variant="primary" size="large">
   Primary large
 </Button>
 ```
 
 ```js
-<Button variant='secondary' buttonSize="small" type='button'>
+<Button variant="secondary" size="small">
   Secondary small
 </Button>
-<Button variant='secondary' buttonSize="medium" type='button'>
+<Button variant='secondary' size="medium">
   Secondary medium
 </Button>
-<Button variant='secondary' buttonSize="large" type='button'>
+<Button variant='secondary' size="large">
   Secondary large
+</Button>
+```
+
+```js
+<Button variant="tertiary" size="small">
+  Tertiary small
+</Button>
+<Button variant='tertiary' size="medium">
+  Tertiary medium
+</Button>
+<Button variant='tertiary' size="large">
+  Tertiary large
+</Button>
+```
+
+### Disabled
+
+```js
+<Button variant='primary' size='medium' disabled>
+  Disabled
 </Button>
 ```
