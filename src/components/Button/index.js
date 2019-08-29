@@ -57,7 +57,6 @@ const Button = styled.button.attrs(({ type }) => ({
   })} */
 
   border-radius: 3px;
-  box-sizing: border-box;
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 
   /* TODO: Save this for links or input fields */

@@ -31,17 +31,15 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
+        path.resolve(__dirname, 'src/components/Text', 'index.js'),
         path.resolve(__dirname, 'src/components/Box', 'index.js'),
-        path.resolve(__dirname, 'src/components/Button', 'index.js'),
-        path.resolve(__dirname, 'src/components/Text', 'index.js')
+        path.resolve(__dirname, 'src/components/Button', 'index.js')
       ]
     },
     {
       // Displays sub-section without component and only readme
       name: 'Theme',
-      sections: [
-        { name: 'Typography', content: 'src/theme/typography/Readme.md' }
-      ]
+      sections: [{ name: 'Theme Spec', content: 'src/theme/spec/Readme.md' }]
     }
   ]
 };
