@@ -6,7 +6,6 @@ import {
   border,
   typography,
   flexbox
-  // theme
 } from 'styled-system';
 import PropTypes from 'prop-types';
 
@@ -18,14 +17,22 @@ const Box = styled.div`
   ${color}
   ${border}
 
-  /* font-family: ${theme.fontFamily.body}; */
+  font-family: ${({ theme }) => theme.fonts.body};
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  /* border: ${({ theme }) => `1px solid ${theme.colors.tertiary}`}; */
 `;
 
 Box.propTypes = {
-  /** type of theme */
-  variant: PropTypes.string
+  /** `primary`, `secondary`, `tertiary` */
+  borders: PropTypes.string,
+  /** `primary`, `secondary`, `tertiary` */
+  colors: PropTypes.string,
+  /** i.e. 1/3 or [1, 1/2, 1/3] for responsiveness */
+  width: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
+  /** i.e. 1 or [1, 2, 3] for responsiveness */
+  fontSize: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
+  /** padding - i.e. 1 or [1, 2, 3] for responsiveness */
+  p: PropTypes.number
 };
 
 /** @component */

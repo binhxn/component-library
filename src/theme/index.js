@@ -51,7 +51,7 @@ const {
 /* Main Theme */
 
 export default {
-  border: {
+  borders: {
     primary: `1px solid ${endpointBlue}`,
     secondary: `1px solid ${turquoise}`,
     tertiary: `1px solid ${slateGrey}`
@@ -113,20 +113,30 @@ export default {
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
+  // globals: {
+  //   h1: {
+  //     ...heading,
+  //     fontSize: [5, 4]
+  //   },
+  //   h2: {
+  //     ...heading,
+  //     fontSize: [4, 3]
+  //   },
+  //   h3: {
+  //     ...heading,
+  //     fontSize: [3, 2]
+  //   },
+  //   h4: {
+  //     ...heading,
+  //     fontSize: [2, 1]
+  //   },
+  //   p: {
+  //     ...body,
+  //     fontSize: 1
+  //   }
+  // }
   /* Variants */
   /* Move into separate file later */
-  // buttons: {
-  //   primary: {
-  //     color: white,
-  //     bg: 'primary',
-  //     border: 'none'
-  //   },
-  //   secondary: {
-  //     color: white,
-  //     bg: 'secondary',
-  //     border: 'none'
-  //   }
-  // },
   //   TODO: FIgure out how to theme with Button component
   //   buttonSizes: {
   //     small: {

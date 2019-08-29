@@ -3,7 +3,13 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
+import GlobalStyles from './globalStyles.js';
 
 export default props => (
-  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <>
+      <GlobalStyles />
+      {props.children}
+    </>
+  </ThemeProvider>
 );
