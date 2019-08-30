@@ -9,6 +9,7 @@ module.exports = {
   usageMode: 'expand',
   styles,
   theme,
+  assetsDir: 'assets/',
   template: {
     favicon: './assets/endpoint-favicon.png'
   },
