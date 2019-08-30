@@ -16,8 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "guide": "npx styleguidist server",
-    "guide:build": "npx styleguidist build"
+    "guide": "styleguidist server",
+    "guide:build": "styleguidist build"
   },
   "eslintConfig": {
     "extends": "react-app"

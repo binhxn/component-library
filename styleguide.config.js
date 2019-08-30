@@ -4,14 +4,13 @@ const { styles, theme } = require('./styleguide.styles');
 
 module.exports = {
   title: `One v${version}`,
-  // editorConfig: { theme: 'cobalt' },
+  // template: './styleguide.template.html',
   serverPort: 4000,
   usageMode: 'expand',
   styles,
   theme,
-  assetsDir: 'assets/',
   template: {
-    favicon: './assets/endpoint-favicon.png'
+    favicon: './endpoint-favicon.png'
   },
   getComponentPathLine: componentPath => {
     const dirname = path.dirname(componentPath, '.js');
