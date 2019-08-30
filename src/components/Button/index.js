@@ -65,13 +65,6 @@ const Button = styled.button.attrs(({ type }) => ({
   border-radius: 3px;
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 
-  /* TODO: Save this for links or input fields */
-  &:focus {
-    outline: ${({ theme, variant }) =>
-      `2px dotted ${theme.colors[variant][2]}`};
-    outline-offset: 5px;
-  }
-
   &:hover {
     background: ${({ theme, variant }) => theme.colors[variant][1]};
     cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')}
@@ -97,9 +90,7 @@ Button.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
   variant: PropTypes.string,
   /** HTML attr */
-  disabled: PropTypes.bool,
-  ...typography,
-  ...space
+  disabled: PropTypes.bool
 };
 
 /** @component */

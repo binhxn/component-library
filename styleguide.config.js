@@ -31,6 +31,7 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
+        path.resolve(__dirname, 'src/components/Link', 'index.js'),
         path.resolve(__dirname, 'src/components/Text', 'index.js'),
         path.resolve(__dirname, 'src/components/Box', 'index.js'),
         path.resolve(__dirname, 'src/components/Button', 'index.js')

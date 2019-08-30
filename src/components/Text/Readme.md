@@ -1,4 +1,4 @@
-HEADER EXAMPLES:
+### Text component variation
 
 ```js
 <Text my={2} as="h1">I am a Header 1 element</Text>

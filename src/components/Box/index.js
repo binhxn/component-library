@@ -29,10 +29,14 @@ Box.propTypes = {
   colors: PropTypes.string,
   /** i.e. 1/3 or [1, 1/2, 1/3] for responsiveness */
   width: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
-  /** i.e. 1 or [1, 2, 3] for responsiveness */
-  fontSize: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
-  /** padding - i.e. 1 or [1, 2, 3] for responsiveness */
-  p: PropTypes.number
+  /** i.e. 1, '1', or [1, 2, 3] for responsiveness */
+  fontSize: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  /** padding - i.e. 1, '1', or [1, 2, 3] for responsiveness */
+  p: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string])
 };
 
 /** @component */

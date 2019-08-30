@@ -24,7 +24,6 @@ Notice the font size:
   Box Component
 </Box>
 
-<h1>sup</h1>
 {/*
 
 Below is a reference to object-styled responsive units
