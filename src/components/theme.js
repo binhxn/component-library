@@ -72,7 +72,7 @@ export default {
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace'
   },
-  fontSizes: [12, 14, 16, 18, 22, 36, 48, 64],
+  fontSizes: [12, 16, 18, 22, 28, 36, 48, 64],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -81,10 +81,15 @@ export default {
   colors: {
     text: '#000',
     background: white,
-    white,
-    primary: endpointBlue,
-    secondary: turquoise,
-    tertiary: slateGrey,
+    blue: ['#0084b4', '#0076a2', '#006990'],
+    primary: ['#0084b4', '#0076a2', '#006990'],
+    // primary: endpointBlue,
+    turquoise: ['#00a7b4', '#0096a2', '#008590'],
+    secondary: ['#00a7b4', '#0096a2', '#008590'],
+    // secondary: turquoise,
+    white: ['#ffffff', '#e5e5e5', '#cccccc'],
+    tertiary: ['#ffffff', '#e5e5e5', '#cccccc'],
+    // tertiary: slateGrey,
     modes: {
       //
       dark: {

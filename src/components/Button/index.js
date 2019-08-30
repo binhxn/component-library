@@ -1,25 +1,28 @@
 // example Button with variants
 import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { variant, typography, space } from 'styled-system';
 import PropTypes from 'prop-types';
 
 const Button = styled.button.attrs(({ type }) => ({
   // we can define dynamic HTML attributes
   type
 }))`
+  ${typography}
+  ${space}
+
   /* all styles follow after the backticks */
   /* @prop - variant */
   ${variant({
     variants: {
       primary: {
-        bg: 'primary',
+        bg: 'primary.0',
         border: 'none',
-        color: 'white'
+        color: 'white.0'
       },
       secondary: {
-        bg: 'secondary',
+        bg: 'secondary.0',
         border: 'none',
-        color: 'white'
+        color: 'white.0'
       },
       tertiary: {
         border: 'tertiary',
@@ -28,7 +31,9 @@ const Button = styled.button.attrs(({ type }) => ({
     }
   })}
 
+
   /* @prop - size */
+  /* If we want to make them responsive, apply props as array to component */
   ${variant({
     prop: 'size',
     variants: {
@@ -50,6 +55,7 @@ const Button = styled.button.attrs(({ type }) => ({
     }
   })}
 
+
   /* TODO: Figure out how to theme later */
   /* ${variant({
     prop: 'size',
@@ -61,12 +67,18 @@ const Button = styled.button.attrs(({ type }) => ({
 
   /* TODO: Save this for links or input fields */
   &:focus {
-    outline: ${({ theme, variant }) => `2px dotted ${theme.colors[variant]}`};
+    outline: ${({ theme, variant }) =>
+      `2px dotted ${theme.colors[variant][2]}`};
     outline-offset: 5px;
   }
 
   &:hover {
+    background: ${({ theme, variant }) => theme.colors[variant][1]};
     cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')}
+  }
+
+  &:active {
+    background: ${({ theme, variant }) => theme.colors[variant][2]};
   }
 `;
 
@@ -85,7 +97,9 @@ Button.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
   variant: PropTypes.string,
   /** HTML attr */
-  disabled: PropTypes.oneOfType([PropTypes.bool, PropTypes.node])
+  disabled: PropTypes.bool,
+  ...typography,
+  ...space
 };
 
 /** @component */

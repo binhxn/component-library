@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import theme from '../theme';
-import GlobalStyles from './globalStyles.js';
+import theme from './theme';
+import StylesGlobal from './stylesGlobal.js';
 
 export default props => (
   <ThemeProvider theme={theme}>
     <>
-      <GlobalStyles />
+      <StylesGlobal />
       {props.children}
     </>
   </ThemeProvider>

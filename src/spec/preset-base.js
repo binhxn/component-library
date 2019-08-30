@@ -1,4 +1,8 @@
-// Not in use. Modify in future.
+/*
+ *
+ * Not in use. Modify in future.
+ *
+ */
 const heading = {
   color: 'text',
   fontFamily: 'heading',

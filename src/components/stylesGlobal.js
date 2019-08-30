@@ -22,4 +22,24 @@ export default createGlobalStyle`
     margin-block-start: 0;
     margin-block-end: 0;
   }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
 `;
