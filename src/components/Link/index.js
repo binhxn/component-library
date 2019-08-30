@@ -7,7 +7,7 @@ const Link = styled.a`
   ${color}
 
   font-family: ${({ theme }) => theme.fonts.body};
-    text-decoration: none;
+  text-decoration: ${({ underline }) => (underline ? 'underline' : 'none')};
   /* border: ${({ theme }) => `1px solid ${theme.colors.tertiary}`}; */
 
   /* Slack's accessibility outline feature */
@@ -31,19 +31,27 @@ const Link = styled.a`
 }
 `;
 
+Link.defaultProps = {
+  as: 'a',
+  underline: false,
+  color: 'primary'
+};
+
 Link.propTypes = {
-  /* URL */
+  /* URL to be used for the Link */
   href: PropTypes.string,
-  /** HTML element */
+  /** HTML element - Can be 'a', 'button', 'input' */
   as: PropTypes.string,
   /** `primary`, `secondary`, `tertiary` */
   color: PropTypes.string,
-  /** i.e. 1/3 or [1, 1/2, 1/3] for responsiveness */
+  /** i.e. 1 or [3, 2, 1] for responsiveness */
   fontSize: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.number,
     PropTypes.string
-  ])
+  ]),
+  /** Adds underline to the link */
+  underline: PropTypes.bool
 };
 
 /** @component */
