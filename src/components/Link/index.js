@@ -7,7 +7,7 @@ const Link = styled.a`
   ${color}
 
   font-family: ${({ theme }) => theme.fonts.body};
-  text-decoration: ${props => (props.underline ? 'underline' : 'none')};
+    text-decoration: none;
   /* border: ${({ theme }) => `1px solid ${theme.colors.tertiary}`}; */
 
   /* Slack's accessibility outline feature */
@@ -17,9 +17,14 @@ const Link = styled.a`
     outline-offset: 5px;
   }
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &:active {
     color: ${({ theme, color }) => theme.colors[color][1]};
 
+  /* TODO: not working as expected */
   &:visited {
     color: none;
   }
