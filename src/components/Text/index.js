@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { space, color, typography } from 'styled-system';
 import PropTypes from 'prop-types';
-import theme from '../theme';
 
 const Text = styled.span`
   ${typography}
@@ -9,12 +8,7 @@ const Text = styled.span`
   ${color}
 
   font-family: ${({ theme }) => theme.fonts.body};
-  /* border: ${({ theme }) => `1px solid ${theme.colors.tertiary}`}; */
 `;
-
-Text.defaultProps = {
-  theme
-};
 
 Text.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
