@@ -83,13 +83,12 @@ export default {
     background: white,
     blue: ['#0084b4', '#0076a2', '#006990'],
     primary: ['#0084b4', '#0076a2', '#006990'],
-    // primary: endpointBlue,
     turquoise: ['#00a7b4', '#0096a2', '#008590'],
     secondary: ['#00a7b4', '#0096a2', '#008590'],
-    // secondary: turquoise,
     white: ['#ffffff', '#e5e5e5', '#cccccc'],
     tertiary: ['#ffffff', '#e5e5e5', '#cccccc'],
     // tertiary: slateGrey,
+    slateGrey: ['#5f6476', '#4b5165', '#383e54'],
     modes: {
       //
       dark: {
@@ -114,50 +113,8 @@ export default {
     mega: '0.25em'
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  radii: [0, 2, 4, 16, 9999, '100%'],
+  radii: [0, 2, 3, 4, 16, 9999, '100%'],
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
-  // globals: {
-  //   h1: {
-  //     ...heading,
-  //     fontSize: [5, 4]
-  //   },
-  //   h2: {
-  //     ...heading,
-  //     fontSize: [4, 3]
-  //   },
-  //   h3: {
-  //     ...heading,
-  //     fontSize: [3, 2]
-  //   },
-  //   h4: {
-  //     ...heading,
-  //     fontSize: [2, 1]
-  //   },
-  //   p: {
-  //     ...body,
-  //     fontSize: 1
-  //   }
-  // }
-  /* Variants */
-  /* Move into separate file later */
-  //   TODO: FIgure out how to theme with Button component
-  //   buttonSizes: {
-  //     small: {
-  //       fontSize: 1,
-  //       p: 1,
-  //       m: 1
-  //     },
-  //     medium: {
-  //       fontSize: 2,
-  //       p: 2,
-  //       m: 1
-  //     },
-  //     large: {
-  //       fontSize: 3,
-  //       p: 3,
-  //       m: 1
-  //     }
-  //   }
 };

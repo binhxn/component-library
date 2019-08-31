@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function NavBarBase(props) {
   // console.log('props', props);
   return (
-    <nav>
+    <nav {...props}>
       <ul>{props.children}</ul>
     </nav>
   );
@@ -17,29 +17,80 @@ function NavBarBase(props) {
 export const NavBar = styled(NavBarBase)`
   ${color}
   ${border}
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  li + li {
+    margin-left: ${({ theme }) =>
+      theme.space[3]}px; /* Need to refactor hardcoded value */
+  }
 `;
 
 function NavBarItem(props) {
-  const Tag = props.as;
-
   return (
     // The 'as' keyword overwrites the entire component
     // as the single element
     // which is why the li style below is not working
-    <li>
-      <Tag {...props}>{props.children}</Tag>
-    </li>
+    <li {...props}>{props.children}</li>
   );
 }
 
-NavBar.Item = styled(NavBarItem)`
+NavBar.Item = styled(NavBarItem).attrs(props => ({
+  // we can define dynamic HTML attributes
+  className: `${props.selected ? 'selected' : ''} ${props.type}`
+}))`
   ${space}
   ${color}
   ${typography}
   ${border}
 
+  list-style-type: none;
   font-family: ${({ theme }) => theme.fonts.body};
 
+  a {
+    display: block;
+    padding: ${({ theme }) => theme.space[2]}px;
+    text-decoration: none; /* Consult with David */
+  }
+
+  &.tab {
+    margin-bottom: -1px;
+
+    & > a {
+    }
+  }
+
+  &.selected {
+    &.tab {
+      border: 1px solid;
+      border-color: ${({ theme }) =>
+        `${theme.colors.primary[0]} ${theme.colors.primary[0]} ${
+          theme.colors.white[0]
+        }`};
+
+      a {
+        color: ${({ theme }) => theme.colors.slateGrey};
+
+      }
+    }
+
+    &.underline {
+
+      /* border: ${({ theme }) => theme.borders.primary}; */
+    }
+
+    &.pill {
+      background: 'primary.0';
+
+      a {
+        color: '#fff'
+      }
+    }
+  }
 
   /* li + li {
     margin-right: ${({ theme }) => theme.space[3]};
@@ -51,37 +102,26 @@ NavBar.Item = styled(NavBarItem)`
     prop: 'type',
     variants: {
       tab: {
-        border: 'tertiary',
-        fontSize: 2,
-        p: 2
+        fontSize: 2
+        // p: 2
       },
       underline: {
-        fontSize: 2,
-        p: 2
+        fontSize: 2
+        // p: 2
       },
       pill: {
         fontSize: 2,
-        p: 2,
-        bg: 'primary.0',
+        // p: 2,
         borderRadius: 2,
         color: 'white.0'
       }
     }
   })}
-
-
 `;
 
-// // Styled Tabs
-// const Tab = styled.a`
-//   margin-bottom: -1px;
-// `;
-
-// // Underline
-// const Underline = styled.a``;
-
-// // Pill
-// const Pill = styled.a``;
+/* - selected && type === 'tab' */
+/* - selected && type === 'underline' */
+/* - selected && type === 'pill' */
 
 NavBar.propTypes = {
   /* URL to be used for the NavBar */
@@ -97,7 +137,7 @@ NavBar.propTypes = {
 };
 
 NavBar.Item.defaultProps = {
-  as: 'a',
+  // as: 'a',
   underline: false,
   color: 'primary'
 };
