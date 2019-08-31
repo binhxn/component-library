@@ -1,0 +1,1 @@
+All **One** Components have access to the `as` prop, provided by [styled-components](https://www.styled-components.com/docs/api#as-polymorphic-prop). We use the **_as_** prop to render a component with the styles of the passed component in **_as_**, but with the system props of the base component.

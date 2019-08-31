@@ -40,7 +40,10 @@ module.exports = {
     {
       // Displays sub-section without component and only readme
       name: 'Theme Spec',
-      sections: [{ name: 'Spec Table', content: 'src/spec/Readme.md' }]
+      sections: [
+        { name: 'Spec Table', content: 'src/spec/SpecTable/Readme.md' },
+        { name: 'The -as- Prop', content: 'src/spec/AsProp/Readme.md' }
+      ]
     }
   ]
 };
