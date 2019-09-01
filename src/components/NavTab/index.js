@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { space } from 'styled-system';
+import { space, flexbox, variant } from 'styled-system';
 import PropTypes from 'prop-types';
 
 // React component base
+// TODO: Create a separate file so this soon-to-be named NavBarBase
+// can be reused with other Nav-type components
 function NavTabBase(props) {
   return (
     <nav {...props}>
@@ -17,28 +19,50 @@ export const NavTab = styled(NavTabBase)`
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.primary[0]}`};
 
   & > div {
+    ${flexbox}
+
+    /* @prop - size */
+    /* If we want to make them responsive, apply props as array to component */
+    ${variant({
+      prop: 'position',
+      variants: {
+        left: {
+          justifyContent: 'flex-start' /* probably not needed */
+        },
+        center: {
+          justifyContent: 'center'
+        },
+        right: {
+          justifyContent: 'flex-end'
+        }
+      }
+    })}
+
     display: flex;
     margin: 0;
     padding: 0;
     margin-bottom: -1px;
+
+    & > .tab {
+      flex: ${({ position }) => (position === 'center' ? 1 : null)};
+      text-align: ${({ position }) =>
+        position === 'center' ? 'center' : null};
+    }
   }
 `;
 
 NavTab.Item = styled.a.attrs(props => ({
-  className: `${props.selected ? 'selected' : ''} tab`
+  className: `${props.selected ? 'selected' : ''} tab` // `tab` is a required className
 }))`
   ${space}
 
   list-style-type: none;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes[2]}px;
-
-  a {
-  }
+  font-size: ${({ theme }) => theme.fontSizes[1]}px;
 
   &.tab {
     display: block;
-    padding: ${({ theme }) => theme.space[2]}px;
+    padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
     color: ${({ theme }) => theme.colors.slateGrey[0]};
     text-decoration: none; /* Consult with David */
     border-radius: ${({ theme }) =>
@@ -73,7 +97,9 @@ NavTab.propTypes = {
     PropTypes.array,
     PropTypes.number,
     PropTypes.string
-  ])
+  ]),
+  /** `left`, `center`, `right` */
+  position: PropTypes.string
 };
 
 NavTab.Item.defaultProps = {
