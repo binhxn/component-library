@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { space, flexbox, variant } from 'styled-system';
+import { space, variant } from 'styled-system';
 import PropTypes from 'prop-types';
 
 // React component base
@@ -16,10 +16,10 @@ function NavTabBase(props) {
 
 // Styled NavTabBase component
 export const NavTab = styled(NavTabBase)`
+  ${space}
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.primary[0]}`};
 
   & > div {
-    ${flexbox}
 
     /* @prop - size */
     /* If we want to make them responsive, apply props as array to component */
@@ -43,7 +43,7 @@ export const NavTab = styled(NavTabBase)`
     padding: 0;
     margin-bottom: -1px;
 
-    & > .tab {
+    & > a {
       flex: ${({ position }) => (position === 'center' ? 1 : null)};
       text-align: ${({ position }) =>
         position === 'center' ? 'center' : null};
@@ -52,7 +52,7 @@ export const NavTab = styled(NavTabBase)`
 `;
 
 NavTab.Item = styled.a.attrs(props => ({
-  className: `${props.selected ? 'selected' : ''} tab` // `tab` is a required className
+  className: `${props.selected ? 'selected' : ''}`
 }))`
   ${space}
 
@@ -60,28 +60,26 @@ NavTab.Item = styled.a.attrs(props => ({
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: ${({ theme }) => theme.fontSizes[1]}px;
 
-  &.tab {
-    display: block;
-    padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
-    color: ${({ theme }) => theme.colors.slateGrey[0]};
-    text-decoration: none; /* Consult with David */
-    border-radius: ${({ theme }) =>
-      `${theme.radii[2]}px ${theme.radii[2]}px 0 0`};
-    border: 1px solid transparent;
+  display: block;
+  padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
+  color: ${({ theme }) => theme.colors.slateGrey[0]};
+  text-decoration: none; /* Consult with David */
+  border-radius: ${({ theme }) =>
+    `${theme.radii[2]}px ${theme.radii[2]}px 0 0`};
+  border: 1px solid transparent;
 
-    &.selected,
-    &:hover {
-      border: 1px solid;
-      border-color: ${({ theme }) => theme.colors.primary[0]};
-      color: ${({ theme }) => theme.colors.slateGrey[2]};
-    }
+  &.selected,
+  &:hover {
+    border: 1px solid;
+    border-color: ${({ theme }) => theme.colors.primary[0]};
+    color: ${({ theme }) => theme.colors.slateGrey[2]};
+  }
 
-    &.selected {
-      border-color: ${({ theme }) =>
-        `${theme.colors.primary[0]} ${theme.colors.primary[0]} ${
-          theme.colors.white[0]
-        }`};
-    }
+  &.selected {
+    border-color: ${({ theme }) =>
+      `${theme.colors.primary[0]} ${theme.colors.primary[0]} ${
+        theme.colors.white[0]
+      }`};
   }
 `;
 
@@ -99,7 +97,9 @@ NavTab.propTypes = {
     PropTypes.string
   ]),
   /** `left`, `center`, `right` */
-  position: PropTypes.string
+  position: PropTypes.string,
+  /* spacing - including margin, width, height */
+  p: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string])
 };
 
 NavTab.Item.defaultProps = {
