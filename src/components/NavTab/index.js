@@ -26,9 +26,6 @@ export const NavTab = styled(NavTabBase)`
     ${variant({
       prop: 'position',
       variants: {
-        left: {
-          justifyContent: 'flex-start' /* probably not needed */
-        },
         center: {
           justifyContent: 'center'
         },
@@ -42,7 +39,6 @@ export const NavTab = styled(NavTabBase)`
     margin: 0;
     padding: 0;
     margin-bottom: -1px;
-
     & > a {
       flex: ${({ position }) => (position === 'center' ? 1 : null)};
       text-align: ${({ position }) =>
@@ -56,17 +52,16 @@ NavTab.Item = styled.a.attrs(props => ({
 }))`
   ${space}
 
-  list-style-type: none;
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes[1]}px;
-
-  display: block;
-  padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
-  color: ${({ theme }) => theme.colors.slateGrey[0]};
-  text-decoration: none; /* Consult with David */
+  border: 1px solid transparent;
   border-radius: ${({ theme }) =>
     `${theme.radii[2]}px ${theme.radii[2]}px 0 0`};
-  border: 1px solid transparent;
+  color: ${({ theme }) => theme.colors.slateGrey[0]};
+  display: block;
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-size: ${({ theme }) => theme.fontSizes[1]}px;
+  list-style-type: none;
+  padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
+  text-decoration: none; /* Consult with David */
 
   &.selected,
   &:hover {
@@ -96,7 +91,7 @@ NavTab.propTypes = {
     PropTypes.number,
     PropTypes.string
   ]),
-  /** `left`, `center`, `right` */
+  /** `center` or `right` */
   position: PropTypes.string,
   /* spacing - including margin, width, height */
   p: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string])

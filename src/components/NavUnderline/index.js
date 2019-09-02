@@ -15,7 +15,7 @@ function NavUnderlineBase(props) {
 }
 
 // Styled NavUnderlineBase component
-export const NavUnderline = styled(NavUnderlineBase)`
+const NavUnderline = styled(NavUnderlineBase)`
   ${space}
 
   & > div {
@@ -24,9 +24,6 @@ export const NavUnderline = styled(NavUnderlineBase)`
     ${variant({
       prop: 'position',
       variants: {
-        left: {
-          justifyContent: 'flex-start' /* probably not needed */
-        },
         center: {
           justifyContent: 'center'
         },
@@ -52,12 +49,13 @@ NavUnderline.Item = styled.a.attrs(props => ({
   className: `${props.selected ? 'selected' : ''}`
 }))`
   ${space}
-  list-style-type: none;
+
+  color: ${({ theme }) => theme.colors.slateGrey[0]};
+  display: block;
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: ${({ theme }) => theme.fontSizes[1]}px;
-  display: block;
+  list-style-type: none;
   padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
-  color: ${({ theme }) => theme.colors.slateGrey[0]};
   text-decoration: none;
   /*transition: all 0.2s ease-in-out; // TODO: it's really slow */
 
@@ -91,7 +89,7 @@ NavUnderline.propTypes = {
     PropTypes.number,
     PropTypes.string
   ]),
-  /** `left`, `center`, `right` */
+  /** `center` or `right` */
   position: PropTypes.string,
   /* spacing - including margin, width, height */
   p: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string])

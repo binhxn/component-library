@@ -143,7 +143,7 @@ NavBar.Item.defaultProps = {
 };
 
 NavBar.Item.propTypes = {
-  as: PropTypes.string
+  as: PropTypes.stringz
 };
 
 /** @component */

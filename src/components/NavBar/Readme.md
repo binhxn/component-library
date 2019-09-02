@@ -1,3 +1,5 @@
+### TODO: Remove after finish NavPill
+
 NavBar wraps its children in a `<nav>` element. Each child component has the flexibility to be displayed as their own element, such as an `<a>` or `<button>` element. If you plan on using **`react-router-dom`**, the `<Link>` component will also work as expected. Styles are reflected based on the element itself.
 
 NavBar can have one of three types:
