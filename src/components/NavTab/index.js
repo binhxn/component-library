@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 // React component base
 // TODO: Create a separate file so this soon-to-be named NavBarBase
 // can be reused with other Nav-type components
-function NavTabBase(props) {
+function NavTabBase({ children, ...rest }) {
   return (
-    <nav {...props}>
-      <div>{props.children}</div>
+    <nav {...rest}>
+      <div>{children}</div>
     </nav>
   );
 }

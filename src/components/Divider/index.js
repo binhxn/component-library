@@ -4,12 +4,12 @@ import { space, color, border, layout } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
-function DividerBase(props) {
-  if (props.children) {
-    return <div {...props}>{props.children}</div>;
+function DividerBase({ children, ...rest }) {
+  if (children) {
+    return <div {...rest}>{children}</div>;
   }
 
-  return <div {...props} />;
+  return <div {...rest} />;
 }
 
 const Divider = styled(DividerBase).attrs(({ children }) => ({

@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 // React component base
 // TODO: Create a separate file so this soon-to-be named NavBarBase
 // can be reused with other Nav-type components
-function NavUnderlineBase(props) {
+function NavUnderlineBase({ children, ...rest }) {
   return (
-    <nav {...props}>
-      <div>{props.children}</div>
+    <nav {...rest}>
+      <div>{children}</div>
     </nav>
   );
 }
@@ -45,8 +45,8 @@ const NavUnderline = styled(NavUnderlineBase)`
   ${space}
 `;
 
-NavUnderline.Item = styled.a.attrs(props => ({
-  className: `${props.selected ? 'selected' : ''}`
+NavUnderline.Item = styled.a.attrs(({ selected }) => ({
+  className: `${selected ? 'selected' : ''}`
 }))`
   color: ${({ theme }) => theme.colors.slateGrey[0]};
   display: block;
