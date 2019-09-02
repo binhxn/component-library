@@ -37,8 +37,7 @@ module.exports = {
         path.resolve(__dirname, 'src/components/Link', 'index.js'),
         path.resolve(__dirname, 'src/components/Text', 'index.js'),
         path.resolve(__dirname, 'src/components/NavTab', 'index.js'),
-        path.resolve(__dirname, 'src/components/NavUnderline', 'index.js'),
-        path.resolve(__dirname, 'src/components/NavBar', 'index.js')
+        path.resolve(__dirname, 'src/components/NavUnderline', 'index.js')
       ]
     },
     {

@@ -15,7 +15,7 @@ function NavTabBase({ children, ...rest }) {
 }
 
 // Styled NavTabBase component
-export const NavTab = styled(NavTabBase)`
+const NavTab = styled(NavTabBase)`
   ${space}
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.primary[0]}`};
 

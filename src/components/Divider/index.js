@@ -4,6 +4,8 @@ import { space, color, border, layout } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
+const DIVIDER_CLASS = 'divider';
+
 function DividerBase({ children, ...rest }) {
   if (children) {
     return <div {...rest}>{children}</div>;
@@ -13,12 +15,12 @@ function DividerBase({ children, ...rest }) {
 }
 
 const Divider = styled(DividerBase).attrs(({ children }) => ({
-  className: `${children ? 'divider' : ''}`
+  className: `${children ? DIVIDER_CLASS : ''}`
 }))`
   font-family: ${({ theme }) => theme.fonts.body};
   width: 100%;
 
-  &.divider {
+  &.${DIVIDER_CLASS} {
     background: transparent;
     display: flex;
     flex-direction: row;

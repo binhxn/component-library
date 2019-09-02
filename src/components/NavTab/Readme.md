@@ -19,7 +19,7 @@ To use `<NavTab />` with [react-router](https://github.com/ReactTraining/react-r
 </NavTab>
 ```
 
-You can use the `position` prop to change the horizontal positioning of the **<NavTab />** component:
+You can use the `position` prop to change the horizontal positioning of the `<NavTab />` component:
 
 ```js
 <NavTab position='right'>

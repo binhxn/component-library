@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { color, typography } from 'styled-system';
+import { typography } from 'styled-system';
 import PropTypes from 'prop-types';
 
 const Link = styled.a`
-  /* ${color} */
   ${typography}
 
   font-family: ${({ theme }) => theme.fonts.body};
