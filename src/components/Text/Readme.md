@@ -1,5 +1,7 @@
 ### Text component variation
 
+By default, the `<Text /> component` is a `<span>` element. Use the `as` property to change the element type.
+
 ```js
 <Text my={2} as="h1">[28px] - I am Header 1 element</Text>
 <Text my={2} as="h2">[22px] - I am Header 2 element</Text>

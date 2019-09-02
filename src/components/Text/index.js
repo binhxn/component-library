@@ -3,11 +3,11 @@ import { space, color, typography } from 'styled-system';
 import PropTypes from 'prop-types';
 
 const Text = styled.span`
+  font-family: ${({ theme }) => theme.fonts.body};
+
   ${typography}
   ${space}
   ${color}
-
-  font-family: ${({ theme }) => theme.fonts.body};
 `;
 
 Text.propTypes = {
@@ -16,7 +16,9 @@ Text.propTypes = {
   /** i.e. 1/3 or [1, 1/2, 1/3] for responsiveness */
   fontSize: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
   /** padding - i.e. 1 or [1, 2, 3] for responsiveness */
-  p: PropTypes.number
+  p: PropTypes.number,
+  /** `h1`, `h2`, `h3`, `h4`, `p` */
+  as: PropTypes.string
 };
 
 /** @component */

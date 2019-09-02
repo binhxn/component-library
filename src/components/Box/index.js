@@ -10,16 +10,15 @@ import {
 import PropTypes from 'prop-types';
 
 const Box = styled.div`
+  font-family: ${({ theme }) => theme.fonts.body};
+  box-sizing: border-box;
+
   ${flexbox}
   ${typography}
   ${space}
   ${layout}
   ${color}
   ${border}
-
-  font-family: ${({ theme }) => theme.fonts.body};
-  box-sizing: border-box;
-  /* border: ${({ theme }) => `1px solid ${theme.colors.tertiary}`}; */
 `;
 
 Box.propTypes = {

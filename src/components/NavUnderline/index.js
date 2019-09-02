@@ -16,8 +16,6 @@ function NavUnderlineBase(props) {
 
 // Styled NavUnderlineBase component
 const NavUnderline = styled(NavUnderlineBase)`
-  ${space}
-
   & > div {
     /* @prop - size */
     /* If we want to make them responsive, apply props as array to component */
@@ -43,13 +41,13 @@ const NavUnderline = styled(NavUnderlineBase)`
         position === 'center' ? 'center' : null};
     }
   }
+
+  ${space}
 `;
 
 NavUnderline.Item = styled.a.attrs(props => ({
   className: `${props.selected ? 'selected' : ''}`
 }))`
-  ${space}
-
   color: ${({ theme }) => theme.colors.slateGrey[0]};
   display: block;
   font-family: ${({ theme }) => theme.fonts.body};
@@ -74,6 +72,8 @@ NavUnderline.Item = styled.a.attrs(props => ({
   & + & {
     margin-left: ${({ theme }) => theme.space[3]}px;
   }
+
+  ${space}
 `;
 
 NavUnderline.defaultProps = {

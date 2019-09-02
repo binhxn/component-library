@@ -7,10 +7,7 @@ const Button = styled.button.attrs(({ type }) => ({
   // we can define dynamic HTML attributes
   type
 }))`
-  ${typography}
-  ${space}
 
-  /* all styles follow after the backticks */
   /* @prop - variant */
   ${variant({
     variants: {
@@ -73,6 +70,9 @@ const Button = styled.button.attrs(({ type }) => ({
   &:active {
     background: ${({ theme, variant }) => theme.colors[variant][2]};
   }
+
+  ${typography}
+  ${space}
 `;
 
 Button.defaultProps = {

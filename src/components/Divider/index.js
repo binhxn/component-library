@@ -12,10 +12,9 @@ function DividerBase(props) {
   return <div {...props} />;
 }
 
-const Divider = styled(DividerBase).attrs(props => ({
-  className: `${props.children ? 'divider' : ''}`
+const Divider = styled(DividerBase).attrs(({ children }) => ({
+  className: `${children ? 'divider' : ''}`
 }))`
-  /* height: 1px; */
   font-family: ${({ theme }) => theme.fonts.body};
   width: 100%;
 
