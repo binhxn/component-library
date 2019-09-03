@@ -1,11 +1,23 @@
 // example Button with variants
+import React from 'react';
 import styled from 'styled-components';
-import { variant, typography, space } from 'styled-system';
+import { color, variant, typography, space } from 'styled-system';
 import PropTypes from 'prop-types';
 
-const Button = styled.button.attrs(({ type }) => ({
+const BUTTON_TEXT_CLASS = 'button-text';
+
+function ButtonBase({ icon, children, ...rest }) {
+  if (icon) {
+    return <button></button>;
+  }
+
+  return <button {...rest}>{children}</button>;
+}
+
+const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
   // we can define dynamic HTML attributes
-  type
+  type,
+  className: `${variant === 'text' ? BUTTON_TEXT_CLASS : ''}`
 }))`
 
   /* @prop - variant */
@@ -71,15 +83,26 @@ const Button = styled.button.attrs(({ type }) => ({
     background: ${({ theme, variant }) => theme.colors[variant][2]};
   }
 
+  /* TODO: Discuss if we want to make this a variant or other prop */
+  &.button-text {
+    border: none;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.tertiary[1]}
+    }
+  }
+
   ${typography}
   ${space}
+  ${color}
 `;
 
 Button.defaultProps = {
   type: 'button',
   variant: 'primary',
   size: 'medium',
-  disabled: false
+  disabled: false,
+  children: 'Button'
 };
 
 Button.propTypes = {
@@ -90,7 +113,9 @@ Button.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
   variant: PropTypes.string,
   /** HTML attr */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /** Content to render */
+  children: PropTypes.node.required
 };
 
 /** @component */

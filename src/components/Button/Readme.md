@@ -1,5 +1,7 @@
 ### Button variation:
 
+Primary Button:
+
 ```js
 <Button variant="primary" size="small">
   Primary small
@@ -11,6 +13,8 @@
   Primary large
 </Button>
 ```
+
+Secondary Button:
 
 ```js
 <Button variant="secondary" size="small">
@@ -24,8 +28,10 @@
 </Button>
 ```
 
+Tertiary Button:
+
 ```js
-<Button variant="tertiary" size="small">
+<Button variant="tertiary" size="small" type="link">
   Tertiary small
 </Button>
 <Button variant='tertiary' size="medium">
@@ -33,6 +39,20 @@
 </Button>
 <Button variant='tertiary' size="large">
   Tertiary large
+</Button>
+```
+
+Text-only Button:
+
+```js
+<Button variant="text" size="small">
+  Text small
+</Button>
+<Button variant="text" size="medium">
+  Text medium
+</Button>
+<Button variant="text" size="large">
+  Text large
 </Button>
 ```
 
