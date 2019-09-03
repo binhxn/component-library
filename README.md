@@ -1,4 +1,4 @@
-# One - Design System
+# One - Design System [![Netlify Status](https://api.netlify.com/api/v1/badges/65d4517b-d01a-4aba-8ee5-bfc299f16755/deploy-status)](https://app.netlify.com/sites/binh-component-library/deploys)
 
 Customized theme-based style props for building design systems with React.
 
