@@ -24,6 +24,7 @@ Notice the font size:
   Box Component
 </Box>
 
+
 {/*
 
 Below is a reference to object-styled responsive units
@@ -38,6 +39,14 @@ Below is a reference to object-styled responsive units
   Box Component
 </Box>
 */}
+```
+
+By default, the `<Box />` component is the HTML element, `<div>`. For semantic purposes, we can change the HTML element using the `as` prop. Let's change the element type to `<section>` (You'll need to inspect the element through your browser's dev tools to check it):
+
+```js
+<Box as='section' color='primary' p={3} fontSize={[1, 2, 3]} border='primary'>
+  Box Component
+</Box>
 ```
 
 ## Holy Grail

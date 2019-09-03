@@ -125,7 +125,8 @@ const styles = {
       }
     },
     heading2: {
-      marginBottom: rhythm(0.5)
+      marginBottom: rhythm(0.5),
+      fontWeight: 'bold'
     },
     heading3: {
       borderBottom: `thin solid ${colors.lightGrey}`,
