@@ -31,7 +31,7 @@ Secondary Button:
 Tertiary Button:
 
 ```js
-<Button variant="tertiary" size="small" type="link">
+<Button variant="tertiary" size="small">
   Tertiary small
 </Button>
 <Button variant='tertiary' size="medium">
@@ -54,6 +54,12 @@ Text-only Button:
 <Button variant="text" size="large">
   Text large
 </Button>
+```
+
+### Icons
+
+```js
+<h1>Coming soon...</h1>
 ```
 
 ### Disabled

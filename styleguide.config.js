@@ -18,6 +18,7 @@ module.exports = {
 
     return `import { ${name} } from '@endpoint-one'`;
   },
+  pagePerSection: true,
   // pagePerSection: process.env.NODE_ENV !== 'production',
   styleguideComponents: {
     Logo: path.join(__dirname, 'lib/components/Logo'),
@@ -31,6 +32,7 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
+        path.resolve(__dirname, 'src/components/Card', 'index.js'),
         path.resolve(__dirname, 'src/components/Divider', 'index.js'),
         path.resolve(__dirname, 'src/components/Box', 'index.js'),
         path.resolve(__dirname, 'src/components/Button', 'index.js'),

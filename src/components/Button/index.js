@@ -7,9 +7,15 @@ import PropTypes from 'prop-types';
 const BUTTON_TEXT_CLASS = 'button-text';
 
 function ButtonBase({ icon, children, ...rest }) {
-  if (icon) {
-    return <button></button>;
-  }
+  /* TODO: Fix icon in button later */
+  // if (icon) {
+  //   return (
+  //     <button className='button-icon'>
+  //       <span />
+  //       {children}
+  //     </button>
+  //   );
+  // }
 
   return <button {...rest}>{children}</button>;
 }
@@ -71,7 +77,7 @@ const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
     key: 'buttonSizes'
   })} */
 
-  border-radius: 3px;
+  border-radius: 2px;
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 
   &:hover {
@@ -92,6 +98,12 @@ const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
     }
   }
 
+  /* TODO: Fix icon in button later */
+  /* &.button-icon > span {
+    height: 60px;
+    width: 60px;
+  } */
+
   ${typography}
   ${space}
   ${color}
@@ -101,8 +113,7 @@ Button.defaultProps = {
   type: 'button',
   variant: 'primary',
   size: 'medium',
-  disabled: false,
-  children: 'Button'
+  disabled: false
 };
 
 Button.propTypes = {
@@ -113,9 +124,7 @@ Button.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
   variant: PropTypes.string,
   /** HTML attr */
-  disabled: PropTypes.bool,
-  /** Content to render */
-  children: PropTypes.node.required
+  disabled: PropTypes.bool
 };
 
 /** @component */

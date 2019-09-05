@@ -137,6 +137,14 @@ const styles = {
     }
   },
   ReactComponent: {
+    root: {
+      borderBottom: '5px dashed #0084B4',
+      paddingBottom: '20px',
+
+      '&:last-of-type': {
+        borderBottom: 'none'
+      }
+    },
     tabs: {
       backgroundColor: colors.paleGrey,
       padding: rhythm([0.5, 1]),

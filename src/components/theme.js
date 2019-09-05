@@ -72,7 +72,7 @@ export default {
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace'
   },
-  fontSizes: [12, 16, 18, 22, 28, 36, 48, 64],
+  fontSizes: [14, 18, 22, 26, 28, 36, 48, 64],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -82,12 +82,13 @@ export default {
     text: '#000',
     background: white,
     blue: ['#0084b4', '#0076a2', '#006990'],
-    primary: ['#0084b4', '#0076a2', '#006990'],
+    primary: ['#0084b4', '#0076a2', '#006990'], // I'm indecisive with blue/primary
     turquoise: ['#00a7b4', '#0096a2', '#008590'],
-    secondary: ['#00a7b4', '#0096a2', '#008590'],
+    secondary: ['#00a7b4', '#0096a2', '#008590'], // I'm indecisive with turquoise/secondary
     white: ['#ffffff', '#e5e5e5', '#cccccc'],
-    tertiary: ['#ffffff', '#e5e5e5', '#cccccc'],
+    tertiary: ['#ffffff', '#e5e5e5', '#cccccc'], // I'm indecisive with white/tertiary
     // tertiary: slateGrey,
+    red: ['#e60000', '#cf0000', '#b80000'],
     slateGrey: ['#5f6476', '#4b5165', '#383e54'],
     modes: {
       //
@@ -113,7 +114,7 @@ export default {
     mega: '0.25em'
   },
   space: [0, 4, 8, 12, 16, 32, 64, 128, 256, 512],
-  radii: [0, 2, 3, 4, 16, 9999, '100%'],
+  radii: [0, 2, 4, 16, 9999, '100%'],
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
