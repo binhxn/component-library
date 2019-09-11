@@ -53,7 +53,6 @@ Card.Content = styled(Box)`
   ${space}
 
   align-self: ${({ children }) => {
-    console.log('Array.isArray(children)', Array.isArray(children));
     if (!Array.isArray(children)) {
       /* if children count is equal to one, then it is NOT an array. */
       return 'center';

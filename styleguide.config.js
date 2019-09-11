@@ -32,10 +32,13 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
-        path.resolve(__dirname, 'src/components/Card', 'index.js'),
-        path.resolve(__dirname, 'src/components/Divider', 'index.js'),
+        path.resolve(__dirname, 'src/components/Layout', 'index.js'),
+        path.resolve(__dirname, 'src/components/Flex', 'index.js'),
         path.resolve(__dirname, 'src/components/Box', 'index.js'),
         path.resolve(__dirname, 'src/components/Button', 'index.js'),
+        path.resolve(__dirname, 'src/components/Card', 'index.js'),
+        path.resolve(__dirname, 'src/components/Divider', 'index.js'),
+        path.resolve(__dirname, 'src/components/Grid', 'index.js'),
         path.resolve(__dirname, 'src/components/Link', 'index.js'),
         path.resolve(__dirname, 'src/components/Text', 'index.js'),
         path.resolve(__dirname, 'src/components/NavTab', 'index.js'),

@@ -1,7 +1,7 @@
 // example Button with variants
 import React from 'react';
 import styled from 'styled-components';
-import { color, variant, typography, space } from 'styled-system';
+import { color, variant, typography, space, layout } from 'styled-system';
 import PropTypes from 'prop-types';
 
 const BUTTON_TEXT_CLASS = 'button-text';
@@ -92,6 +92,7 @@ const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
   /* TODO: Discuss if we want to make this a variant or other prop */
   &.button-text {
     border: none;
+    background: transparent;
 
     &:hover {
       background: ${({ theme }) => theme.colors.tertiary[1]}
@@ -107,6 +108,7 @@ const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
   ${typography}
   ${space}
   ${color}
+  ${layout}
 `;
 
 Button.defaultProps = {

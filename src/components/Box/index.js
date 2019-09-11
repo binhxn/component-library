@@ -5,7 +5,7 @@ import {
   color,
   border,
   typography,
-  flexbox
+  position
 } from 'styled-system';
 import PropTypes from 'prop-types';
 
@@ -13,12 +13,12 @@ const Box = styled.div`
   font-family: ${({ theme }) => theme.fonts.body};
   box-sizing: border-box;
 
-  ${flexbox}
   ${typography}
   ${space}
   ${layout}
   ${color}
   ${border}
+  ${position}
 `;
 
 Box.propTypes = {

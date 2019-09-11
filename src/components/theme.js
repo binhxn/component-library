@@ -61,7 +61,7 @@ export default {
     secondary: turquoise
   },
   // breakpoints: ['32em', '48em', '64em'],
-  breakpoints: ['600px', '800px', '1000px'],
+  breakpoints: ['768px'],
   // breakpoints: {
   //   sm: '32em',
   //   md: '48em',
@@ -117,5 +117,8 @@ export default {
   radii: [0, 2, 4, 16, 9999, '100%'],
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
-  maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536]
+  maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],
+  holyGrail: {
+    panel: '16em'
+  }
 };

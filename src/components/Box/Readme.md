@@ -8,8 +8,8 @@ Notice the font size:
 <Box
   color='primary'
   p={3}
-  width={[1, 1/2, 1/3]}
-  fontSize={[1,2,3]}
+  width={[1, 1/2]}
+  fontSize={[1,2]}
   border='primary'
 >
   Box Component
@@ -17,8 +17,8 @@ Notice the font size:
 <Box
   color='primary'
   p={3}
-  width={[1, 1/2, 1/3]}
-  fontSize={[1,2,3]}
+  width={[1, 1/2]}
+  fontSize={[1,2]}
   border='primary'
 >
   Box Component
@@ -46,31 +46,5 @@ By default, the `<Box />` component is the HTML element, `<div>`. For semantic p
 ```js
 <Box as='section' color='primary' p={3} fontSize={[1, 2, 3]} border='primary'>
   Box Component
-</Box>
-```
-
-## Holy Grail
-
-TODO: Create `<Aside>` and `<Content>` components that are collapsible
-
-```js
-<Box>
-  <Box bg='lightgreen' p='2'>
-    Header
-  </Box>
-  <Box flex='1' flexDirection={['column', 'row']} display='flex'>
-    <Box bg='lightblue' flex='1' minWidth='0' p='2'>
-      Content
-    </Box>
-    <Box bg='pink' flexBasis='auto' flexBasis={[0, 64]} order='-1' p='2'>
-      Left
-    </Box>
-    <Box bg='orange' flexBasis='auto' flexBasis={[0, 64]} p='2'>
-      Right
-    </Box>
-  </Box>
-  <Box bg='yellow' p='2'>
-    Footer
-  </Box>
 </Box>
 ```
