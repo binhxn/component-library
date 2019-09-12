@@ -27,7 +27,11 @@ Box.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
   colors: PropTypes.string,
   /** i.e. 1/3 or [1, 1/2, 1/3] for responsiveness */
-  width: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
+  width: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.number,
+    PropTypes.string
+  ]),
   /** i.e. 1, '1', or [1, 2, 3] for responsiveness */
   fontSize: PropTypes.oneOfType([
     PropTypes.array,
