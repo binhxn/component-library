@@ -50,7 +50,7 @@ const {
 
 /* Main Theme */
 
-export default {
+export const theme = {
   borders: {
     primary: `1px solid ${endpointBlue}`,
     secondary: `1px solid ${turquoise}`,
