@@ -6,17 +6,16 @@ import PropTypes from 'prop-types';
 
 const BUTTON_TEXT_CLASS = 'button-text';
 
+/* TODO: Fix icon in button later */
+// if (icon) {
+//   return (
+//     <button className='button-icon'>
+//       <span />
+//       {children}
+//     </button>
+//   );
+// }
 function ButtonBase({ icon, children, ...rest }) {
-  /* TODO: Fix icon in button later */
-  // if (icon) {
-  //   return (
-  //     <button className='button-icon'>
-  //       <span />
-  //       {children}
-  //     </button>
-  //   );
-  // }
-
   return <button {...rest}>{children}</button>;
 }
 

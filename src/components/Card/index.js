@@ -4,13 +4,11 @@ import { flex, space, border, variant } from 'styled-system';
 import PropTypes from 'prop-types';
 
 import Box from '../Box';
-// import Text from '../Text';
-// import profilePicture from '../../assets/profilePicture.png';
 
-function CardBase(props) {
+function CardBase({ children, ...rest }) {
   return (
-    <Box as='section' {...props}>
-      {props.children}
+    <Box as='section' {...rest}>
+      {children}
     </Box>
   );
 }

@@ -15,6 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "bundle": "rollup -c",
     "guide": "styleguidist server",
     "guide:build": "styleguidist build",
     "publish": "npm publish --access=public"
@@ -35,6 +36,14 @@
     ]
   },
   "devDependencies": {
-    "react-styleguidist": "^9.1.16"
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "react-styleguidist": "^9.1.16",
+    "rollup": "^1.21.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "semantic-release": "^15.13.24"
   }
 }

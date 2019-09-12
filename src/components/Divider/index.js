@@ -7,11 +7,7 @@ import PropTypes from 'prop-types';
 const DIVIDER_CLASS = 'divider';
 
 function DividerBase({ children, ...rest }) {
-  if (children) {
-    return <div {...rest}>{children}</div>;
-  }
-
-  return <div {...rest} />;
+  return <div {...rest}>{children}</div>;
 }
 
 const Divider = styled(DividerBase).attrs(({ children }) => ({
