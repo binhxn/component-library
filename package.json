@@ -16,7 +16,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "guide": "styleguidist server",
-    "guide:build": "styleguidist build"
+    "guide:build": "styleguidist build",
+    "publish": "npm publish --access=public"
   },
   "eslintConfig": {
     "extends": "react-app"
