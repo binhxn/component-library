@@ -1,7 +1,13 @@
 {
   "name": "@system-one/react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Library of re-usable React components based on styled-system",
+  "author": "Binh Nguyen <binh@endpointclosing.com>",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@styled-system/theme-get": "^5.1.1",
     "react": "^16.9.0",
@@ -15,9 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "bundle": "rollup -c",
     "guide": "styleguidist server",
     "guide:build": "styleguidist build",
+    "rollup": "rollup -c",
     "publish": "npm publish --access=public"
   },
   "eslintConfig": {
