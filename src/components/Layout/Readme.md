@@ -1,4 +1,4 @@
-TODO: LAYOUT COMPONENTS
+### Customized Holy Grail /w Layout components
 
 ```js
 import Box from '../Box';
@@ -7,8 +7,8 @@ import Text from '../Text';
 import Button from '../Button';
 
 <Layout flexDirection='column' position='relative'>
-  {/* NavBar */}
-  <Layout.NavBar
+  {/* Navbar */}
+  <Layout.Navbar
     bg='lightgreen'
     p='3'
     alignItems='center'
@@ -17,10 +17,10 @@ import Button from '../Button';
     <Button variant='text' display={['block', 'none']}>
       Menu1
     </Button>
-    <Text as='h4'>NavBar</Text>
+    <Text as='h4'>Navbar</Text>
     <Box />
-  </Layout.NavBar>
-  <Flex className='content-wrapper' flexDirection='row'>
+  </Layout.Navbar>
+  <Flex className='container' flexDirection='row'>
     {/* Left Panel */}
     <Layout.LeftPanel
       bg='pink'
@@ -38,10 +38,10 @@ import Button from '../Button';
       </Text>
     </Layout.LeftPanel>
     <Flex className='subcontent-wrapper' flexDirection='column' flex='1'>
-      {/* SubNavBar */}
-      <Layout.SubNavBar bg='papayawhip' p='3' justifyContent='center'>
-        <Text as='h4'>SubNavBar</Text>
-      </Layout.SubNavBar>
+      {/* SubNavbar */}
+      <Layout.SubNavbar bg='papayawhip' p='3' justifyContent='center'>
+        <Text as='h4'>SubNavbar</Text>
+      </Layout.SubNavbar>
       {/* Content Container */}
       <Flex>
         {/* Content */}
@@ -195,116 +195,6 @@ import Button from '../Button';
               justifyContent='center'
             >
               2
-            </Flex>
-          </Flex>
-          <Flex flexDirection={['column', 'row']}>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={[null, 1 / 12]}
-              justifyContent='center'
-            >
-              1
-            </Flex>
-            <Flex
-              bg='lightblue'
-              py='3'
-              m={[2, 3]}
-              width={['initial', 1 / 12]}
-              justifyContent='center'
-            >
-              1
             </Flex>
           </Flex>
         </Layout.Content>

@@ -1,8 +1,7 @@
 {
-  "name": "one",
+  "name": "@system-one/react",
   "version": "0.1.0",
-  "description": "Library of re-usable components for Endpoint projects",
-  "private": true,
+  "description": "Library of re-usable React components based on styled-system",
   "dependencies": {
     "@styled-system/theme-get": "^5.1.1",
     "react": "^16.9.0",

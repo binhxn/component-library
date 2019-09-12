@@ -13,13 +13,11 @@ const Layout = styled(Flex)`
 // }
 
 // Keeping this around for backwards compatibility, but it's the same as `FLEX`
-Layout.NavBar = styled(Flex)`
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  /* flex: 1; */
-`;
+Layout.Navbar = styled(Flex)``;
+Layout.Container = styled(Flex)``;
+Layout.SubContainer = styled(Flex)``;
 
-Layout.SubNavBar = styled(Flex)``;
+Layout.SubNavbar = styled(Flex)``;
 
 Layout.LeftPanel = styled(Box)``;
 
@@ -34,7 +32,7 @@ Layout.Footer = styled(Box)``;
  */
 Layout.defaultProps = {};
 
-Layout.NavBar.defaultProps = {
+Layout.Navbar.defaultProps = {
   // theme
 };
 
@@ -42,7 +40,7 @@ Layout.propTypes = {
   // ...Box.propTypes
 };
 
-Layout.NavBar.propTypes = {
+Layout.Navbar.propTypes = {
   // theme: PropTypes.object
 };
 

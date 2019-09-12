@@ -29,7 +29,8 @@ const Divider = styled(DividerBase).attrs(({ children }) => ({
     &::before,
     &::after {
       content: '';
-      background: ${({ bg }) => themeGet(`colors.${bg}`)};
+      background: ${({ bg }) =>
+        themeGet(`colors.${bg}`)}; /* probably don't need */
       /* Do we want background to be flexible or only theme colors? */
       flex: 1;
       height: 1px;
