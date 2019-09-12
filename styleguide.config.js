@@ -22,7 +22,7 @@ module.exports = {
   // pagePerSection: process.env.NODE_ENV !== 'production',
   styleguideComponents: {
     Logo: path.join(__dirname, 'lib/components/Logo'),
-    Wrapper: path.join(__dirname, 'src/ThemeWrapper')
+    Wrapper: path.join(__dirname, 'src/EndpointProvider')
   },
   sections: [
     {

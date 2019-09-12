@@ -1,11 +1,9 @@
-// ThemeProvider wrapper for Styleguide
-
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
 import StylesGlobal from './stylesGlobal.js';
 
-export default props => (
+const EndpointProvider = props => (
   <ThemeProvider theme={theme}>
     <>
       <StylesGlobal />
@@ -13,3 +11,6 @@ export default props => (
     </>
   </ThemeProvider>
 );
+
+export default EndpointProvider;
+export { EndpointProvider };

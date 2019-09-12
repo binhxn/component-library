@@ -1,3 +1,6 @@
+import EndpointProvider from './EndpointProvider';
+import theme from './theme';
+
 import Box from './components/Box';
 import Button from './components/Button';
 import Card from './components/Card';
@@ -10,9 +13,9 @@ import NavTab from './components/NavTab';
 import NavUnderline from './components/NavUnderline';
 import Text from './components/Text';
 
-import theme from './theme';
-
 export {
+  EndpointProvider,
+  theme,
   Box,
   Button,
   Card,
@@ -23,6 +26,5 @@ export {
   Link,
   NavTab,
   NavUnderline,
-  Text,
-  theme
+  Text
 };
