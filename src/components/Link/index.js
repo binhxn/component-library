@@ -1,41 +1,44 @@
 import styled from 'styled-components';
 import { typography } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
-const Link = styled.a.attrs({
-  role: 'link'
-})`
+const Link = styled.a.attrs({ role: 'link' })`
   ${typography}
 
-  font-family: ${({ theme }) => theme.fonts.body};
+  font-family: ${themeGet('fonts.body', 'sans-serif')};
   text-decoration: none;
-  border-bottom: ${({ underline, theme, color }) =>
-    underline
-      ? `1px solid ${theme.colors[color][1]}`
-      : `1px solid transparent`};
+  border-bottom: 1px solid;
+  border-color: ${({ underline, color }) =>
+    underline ? `${themeGet(`colors.${color}.1`)}` : `transparent`};
+
+  }
 
 
   /* Slack's accessibility outline feature */
   &:focus {
-    /* incomplete dotted outline */
-    outline: ${({ theme, color }) => `2px dotted ${theme.colors[color][1]}`};
+    /* TODO: need to revisit */
+    /* outline: ${({ theme, color }) =>
+      `2px dotted ${themeGet(`colors.${color}.1`)}`}; */
+    outline-color: ${({ color }) => `${themeGet(`colors.${color}.1`)}`};
+    outline-width: 2px;
+    outline-style: dotted;
     outline-offset: 5px;
   }
 
   /* Order matters, :visited must be above :hover and :active */
   &:visited {
-    color: ${({ theme, color }) => theme.colors[color][1]};
+    color: ${({ color }) => themeGet(`colors.${color}.2`)};
   }
 
   &:hover {
     /* better hover effect than underline */
-    border-bottom-color: ${({ theme, color }) => theme.colors[color][1]};;
+    border-bottom-color: ${({ color }) => themeGet(`colors.${color}.1`)};;
     border-bottom-width: 2px;
   }
 
   &:active {
-    color: ${({ theme, color }) => theme.colors[color][1]};
-
+    color: ${({ color }) => themeGet(`colors.${color}.1`)};
 }
 `;
 

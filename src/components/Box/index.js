@@ -8,9 +8,10 @@ import {
   position
 } from 'styled-system';
 import PropTypes from 'prop-types';
+import { themeGet } from '@styled-system/theme-get';
 
 const Box = styled.div`
-  font-family: ${({ theme }) => theme.fonts.body};
+  font-family: ${themeGet('fonts.body', 'sans-serif')};
   box-sizing: border-box;
 
   ${typography}

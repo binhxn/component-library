@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { space, color, typography, variant } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
 const Text = styled.span`
-  font-family: ${({ theme }) => theme.fonts.body};
+  font-family: ${themeGet('fonts.body', 'sans-serif')};
 
   ${typography}
   ${space}

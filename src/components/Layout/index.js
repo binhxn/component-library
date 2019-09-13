@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import Box from '../Box';
 import Flex from '../Flex';
 
-const Layout = styled(Flex)`
-  /* display: flex; */
-`;
+const Layout = styled(Flex)``;
 
 // function NavBarBase({ children, ...rest }) {
 //   return <Flex {...rest}>{children}</Flex>;
@@ -16,15 +14,10 @@ const Layout = styled(Flex)`
 Layout.Navbar = styled(Flex)``;
 Layout.Container = styled(Flex)``;
 Layout.SubContainer = styled(Flex)``;
-
 Layout.SubNavbar = styled(Flex)``;
-
 Layout.LeftPanel = styled(Box)``;
-
 Layout.RightPanel = styled(Flex)``;
-
 Layout.Content = styled(Flex)``;
-
 Layout.Footer = styled(Box)``;
 /*
  * PropTypes below

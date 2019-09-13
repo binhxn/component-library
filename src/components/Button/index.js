@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { color, variant, typography, space, layout } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
 const BUTTON_TEXT_CLASS = 'button-text';
@@ -80,12 +81,12 @@ const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 
   &:hover {
-    background: ${({ theme, variant }) => theme.colors[variant][1]};
+    background: ${({ variant }) => themeGet(`colors.${variant}.1`)};
     cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')}
   }
 
   &:active {
-    background: ${({ theme, variant }) => theme.colors[variant][2]};
+    background: ${({ variant }) => themeGet(`colors.${variant}.2`)};
   }
 
   /* TODO: Discuss if we want to make this a variant or other prop */
@@ -94,7 +95,7 @@ const Button = styled(ButtonBase).attrs(({ type, variant }) => ({
     background: transparent;
 
     &:hover {
-      background: ${({ theme }) => theme.colors.tertiary[1]}
+      background: ${themeGet(`colors.tertiary.1`)};
     }
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { space, variant } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
 // React component base
@@ -17,7 +18,7 @@ function NavTabBase({ children, ...rest }) {
 // Styled NavTabBase component
 const NavTab = styled(NavTabBase)`
   ${space}
-  border-bottom: ${({ theme }) => `1px solid ${theme.colors.primary[0]}`};
+  border-bottom: 1px solid ${themeGet('colors.primary.0')};
 
   & > div {
 
@@ -53,28 +54,25 @@ NavTab.Item = styled.a.attrs(props => ({
   ${space}
 
   border: 1px solid transparent;
-  border-radius: ${({ theme }) =>
-    `${theme.radii[2]}px ${theme.radii[2]}px 0 0`};
-  color: ${({ theme }) => theme.colors.slateGrey[0]};
+  border-radius: ${themeGet('radii.2')}px ${themeGet('radii.2')}px 0 0;
+  color: ${themeGet('colors.slateGrey.0')};
   display: block;
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes[1]}px;
+  font-family: ${themeGet('fonts.body')};
+  font-size: ${themeGet('fontSizes.1')}px;
   list-style-type: none;
-  padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
+  padding: ${themeGet('space.2')}px ${themeGet('space.3')}px;
   text-decoration: none; /* Consult with David */
 
   &.selected,
   &:hover {
     border: 1px solid;
-    border-color: ${({ theme }) => theme.colors.primary[0]};
-    color: ${({ theme }) => theme.colors.slateGrey[2]};
+    border-color: ${themeGet('colors.primary.0')};
+    color: ${themeGet('colors.slateGrey.2')};
   }
 
   &.selected {
-    border-color: ${({ theme }) =>
-      `${theme.colors.primary[0]} ${theme.colors.primary[0]} ${
-        theme.colors.white[0]
-      }`};
+    border-color: ${themeGet('colors.primary.0')}
+      ${themeGet('colors.primary.0')} ${themeGet('colors.white.0')};
   }
 `;
 

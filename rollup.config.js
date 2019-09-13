@@ -4,16 +4,25 @@ import babel from 'rollup-plugin-babel';
 
 import pkg from './package.json';
 
+const globals = {
+  react: 'React',
+  'styled-components': 'styled',
+  'styled-system': 'styledSystem',
+  '@styled-system/theme-get': 'themeGet'
+};
+
 export default {
   input: ['src/index.js'], // our source file
   output: [
     {
       file: pkg.main,
-      format: 'cjs' // preferred format
+      format: 'cjs',
+      globals
     },
     {
       file: pkg.module,
-      format: 'es' // preferred format
+      format: 'es',
+      globals
     }
   ],
   external: [
@@ -21,19 +30,20 @@ export default {
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {})
   ],
+  // Issue with theme.fonts.body
   plugins: [
-    // babel - needed for JSX with ES6 syntax
-    // since this was created with CRA, we do not need to configure .babelrc
-    babel({
-      exclude: 'node_modules/**'
-      // extensions: ['.js', '.jsx', '.ts', '.tsx']
-    }),
+    // resolve - teaches Rollup how to find external modules
+    // https://rollupjs.org/guide/en/#with-npm-packages
+    resolve({ mainFields: ['module', 'main'] }),
     // Note that rollup-plugin-commonjs should go before other plugins that
     // transform your modules — this is to prevent other plugins from
     // making changes that break the CommonJS detection.
     commonjs({
+      include: 'node_modules/**',
+      // left-hand side can be an absolute path, a path
+      // relative to the current directory, or the name
+      // of a module in node_modules
       namedExports: {
-        // required due to manual exports due to styled-components
         'node_modules/react-is/index.js': [
           'isElement',
           'isValidElementType',
@@ -41,11 +51,11 @@ export default {
         ]
       }
     }),
-    // resolve - teaches Rollup how to find external modules
-    // https://rollupjs.org/guide/en/#with-npm-packages
-    resolve({
-      browser: true,
-      preferBuiltins: false
+    // babel - needed for JSX with ES6 syntax
+    // since this was created with CRA, we do not need to configure .babelrc
+    babel({
+      exclude: 'node_modules/**'
+      // extensions: ['.js', '.jsx', '.ts', '.tsx']
     })
   ]
 };

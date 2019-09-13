@@ -13,7 +13,7 @@ function DividerBase({ children, ...rest }) {
 const Divider = styled(DividerBase).attrs(({ children }) => ({
   className: `${children ? DIVIDER_CLASS : ''}`
 }))`
-  font-family: ${({ theme }) => theme.fonts.body};
+  font-family: ${themeGet('fonts.body', 'sans-serif')};
   width: 100%;
 
   &.${DIVIDER_CLASS} {
@@ -25,8 +25,7 @@ const Divider = styled(DividerBase).attrs(({ children }) => ({
     &::before,
     &::after {
       content: '';
-      background: ${({ bg }) =>
-        themeGet(`colors.${bg}`)}; /* probably don't need */
+      background: ${({ bg }) => themeGet(`colors.${bg}`)};
       /* Do we want background to be flexible or only theme colors? */
       flex: 1;
       height: 1px;

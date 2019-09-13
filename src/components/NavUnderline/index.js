@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { space, variant } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
 // React component base
@@ -48,29 +49,29 @@ const NavUnderline = styled(NavUnderlineBase)`
 NavUnderline.Item = styled.a.attrs(({ selected }) => ({
   className: `${selected ? 'selected' : ''}`
 }))`
-  color: ${({ theme }) => theme.colors.slateGrey[0]};
+  color: ${themeGet('colors.slateGrey.0')};
   display: block;
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes[1]}px;
+  font-family: ${themeGet('fonts.body')};
+  font-size: ${themeGet('fontSizes.1')}px;
   list-style-type: none;
-  padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
+  padding: ${themeGet('space.2')}px ${themeGet('space.3')}px;
   text-decoration: none;
   /*transition: all 0.2s ease-in-out; // TODO: it's really slow */
 
   /* Order matters here for hover states */
   &:hover {
     border-bottom: 2px solid;
-    border-color: ${({ theme }) => theme.colors.tertiary[2]};
-    color: ${({ theme }) => theme.colors.slateGrey[2]};
+    border-color: ${themeGet('colors.tertiary.2')};
+    color: ${themeGet('colors.slateGrey.2')};
   }
 
   &.selected {
     border-bottom: 2px solid;
-    border-color: ${({ theme }) => theme.colors.primary[0]};
+    border-color: ${themeGet('colors.primary.0')};
   }
 
   & + & {
-    margin-left: ${({ theme }) => theme.space[3]}px;
+    margin-left: ${themeGet('space.3')}px;
   }
 
   ${space}
