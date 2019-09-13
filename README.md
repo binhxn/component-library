@@ -24,6 +24,7 @@ Since this component is based off the concept of _theme-based styling_, you will
 
 ```
 import { ThemeProvider } from 'styled-components';
+import { theme } from '@system-one/react';
 
 const App = props => (
   <ThemeProvider theme={theme}>

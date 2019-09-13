@@ -35,7 +35,7 @@ export default {
     // resolve - teaches Rollup how to find external modules
     // https://rollupjs.org/guide/en/#with-npm-packages
     resolve({ mainFields: ['module', 'main'] }),
-    // Note that rollup-plugin-commonjs should go before other plugins that
+    // Note that rollup-plugin-commonjs _should_ go before other plugins that
     // transform your modules — this is to prevent other plugins from
     // making changes that break the CommonJS detection.
     commonjs({
@@ -52,7 +52,6 @@ export default {
       }
     }),
     // babel - needed for JSX with ES6 syntax
-    // since this was created with CRA, we do not need to configure .babelrc
     babel({
       exclude: 'node_modules/**'
       // extensions: ['.js', '.jsx', '.ts', '.tsx']
