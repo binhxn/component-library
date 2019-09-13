@@ -20,9 +20,11 @@ or
 npm install @system-one/react
 ```
 
-Since this component is based off the concept of _theme-based styling_, you will need to wrap your root component with `styled-components`' **ThemeProvider**:
+Since this component is based off the concept of _theme-based styling_, you will need to install and wrap your root component with `styled-components`' **ThemeProvider**:
 
 ```
+import { ThemeProvider } from 'styled-components';
+
 const App = props => (
   <ThemeProvider theme={theme}>
     {props.children}
