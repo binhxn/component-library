@@ -16,7 +16,7 @@ module.exports = {
     const dirname = path.dirname(componentPath, '.js');
     const name = dirname.split('/').slice(-1)[0];
 
-    return `import { ${name} } from '@endpoint-one'`;
+    return `import { ${name} } from '@system-one/react'`;
   },
   pagePerSection: true,
   // pagePerSection: process.env.NODE_ENV !== 'production',

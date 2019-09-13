@@ -1,4 +1,4 @@
-# One - Design System [![Netlify Status](https://api.netlify.com/api/v1/badges/65d4517b-d01a-4aba-8ee5-bfc299f16755/deploy-status)](https://app.netlify.com/sites/binh-component-library/deploys)
+# System-One - Design System [![Netlify Status](https://api.netlify.com/api/v1/badges/65d4517b-d01a-4aba-8ee5-bfc299f16755/deploy-status)](https://app.netlify.com/sites/binh-component-library/deploys)
 
 Customized theme-based style props for building design systems with React.
 
@@ -7,6 +7,30 @@ Customized theme-based style props for building design systems with React.
 - `styled-components`
 - `styled-systems`
 - `react-styleguidist` for component style guide
+
+## Installation
+
+```
+yarn add @system-one/react
+```
+
+or
+
+```
+npm install @system-one/react
+```
+
+Since this component is based off the concept of _theme-based styling_, you will need to wrap your root component with `styled-components`' **ThemeProvider**:
+
+```
+const App = props => (
+  <ThemeProvider theme={theme}>
+    {props.children}
+  </ThemeProvider>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
 
 ## Available Scripts
 
