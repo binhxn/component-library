@@ -142,6 +142,12 @@ const styles = {
       color: `${colors.light} !important`,
     },
   },
+  Logo: {
+    logo: {
+      color: 'red',
+      backgroundColor: 'red',
+    },
+  },
   ReactComponent: {
     root: {
       borderBottom: '5px dashed #0084B4',
