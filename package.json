@@ -1,6 +1,6 @@
 {
   "name": "@system-one/react",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Library of re-usable React components based on styled-system",
   "author": "Binh Nguyen <binh@endpointclosing.com>",
   "browser": "dist/index.js",
