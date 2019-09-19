@@ -1,0 +1,155 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import Button from './';
+import Text from '../Text';
+
+<Meta title='MDX|Button' component={Button} />
+
+# Button
+
+<!-- ### Variations -->
+
+#### Primary Button:
+
+<Preview>
+  <Story name='Primary'>
+    <>
+      <Button variant='primary' size='small'>
+        Primary small
+      </Button>
+      <Button variant='primary' size='medium'>
+        Primary medium
+      </Button>
+      <Button variant='primary' size='large'>
+        Primary large
+      </Button>
+    </>
+  </Story>
+</Preview>
+
+<!-- possible remove below? -->
+
+```js live=true
+<Button variant="primary" size="small">
+  Primary small
+</Button>
+<Button variant="primary" size="medium">
+  Primary medium
+</Button>
+<Button variant="primary" size="large">
+  Primary large
+</Button>
+```
+
+#### Secondary Button:
+
+<Preview>
+  <Story name='Secondary'>
+    <>
+      <Button variant='secondary' size='small'>
+        Secondary small
+      </Button>
+      <Button variant='secondary' size='medium'>
+        Secondary medium
+      </Button>
+      <Button variant='secondary' size='large'>
+        Secondary large
+      </Button>
+    </>
+  </Story>
+</Preview>
+
+```js
+<Button variant="secondary" size="small">
+  Secondary small
+</Button>
+<Button variant='secondary' size="medium">
+  Secondary medium
+</Button>
+<Button variant='secondary' size="large">
+  Secondary large
+</Button>
+```
+
+#### Tertiary Button:
+
+<Preview>
+  <Story name='Tertiary'>
+    <>
+      <Button variant='tertiary' size='small'>
+        Tertiary small
+      </Button>
+      <Button variant='tertiary' size='medium'>
+        Tertiary medium
+      </Button>
+      <Button variant='tertiary' size='large'>
+        Tertiary large
+      </Button>
+    </>
+  </Story>
+</Preview>
+
+```js
+<Button variant="tertiary" size="small">
+  Tertiary small
+</Button>
+<Button variant='tertiary' size="medium">
+  Tertiary medium
+</Button>
+<Button variant='tertiary' size="large">
+  Tertiary large
+</Button>
+```
+
+#### Text-only Button:
+
+<Preview>
+  <Story name='Text-only'>
+    <>
+      <Button variant='text' size='small'>
+        Text small
+      </Button>
+      <Button variant='text' size='medium'>
+        Text medium
+      </Button>
+      <Button variant='text' size='large'>
+        Text large
+      </Button>
+    </>
+  </Story>
+</Preview>
+
+```js
+<Button variant="text" size="small">
+  Text small
+</Button>
+<Button variant="text" size="medium">
+  Text medium
+</Button>
+<Button variant="text" size="large">
+  Text large
+</Button>
+```
+
+#### Disabled
+
+<Preview>
+  <Story name='Disabled'>
+    <>
+      <Button variant='primary' size='medium' disabled>
+        Disabled
+      </Button>
+    </>
+  </Story>
+</Preview>
+
+```js
+<Button variant='primary' size='medium' disabled>
+  Disabled
+</Button>
+```
+
+#### Icons
+
+```js
+<h1>Coming soon...</h1>
+```

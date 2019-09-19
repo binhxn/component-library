@@ -1,0 +1,46 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import Box from './';
+import Text from '../Text';
+
+<Meta title='MDX|Box' component={Box} />
+
+# Box
+
+#### Responsive
+
+The `Box` component serves as a layout container; It is _flexible_ and responsive.
+
+**width** and **fontSize** are passed an array of values. When the browser scales from desktop to mobile view, the font size changes without the use of media queries. Instead, `styled-system` provides a **breakpoint** theme that allows you to adjust for multiple screen sizes.
+
+Notice the font size:
+
+<Preview>
+  <Story name='Responsive'>
+    <>
+      <Box p={3} width={[1, 1 / 2]} fontSize={[1, 2]} border='primary'>
+        Box Component 1
+      </Box>
+      <Box p={3} width={[1, 1 / 2]} fontSize={[1, 2]} border='primary'>
+        Box Component 2
+      </Box>
+    </>
+  </Story>
+</Preview>
+
+#### The 'as' prop
+
+By default, the `<Box />` component is the HTML element, `<div>`. For semantic purposes, we can change the HTML element using the `as` prop. Let's change the element type to `<section>` (You'll need to inspect the element through your browser's dev tools to check it):
+
+<Preview>
+  <Story name='as prop'>
+    <Box
+      as='section'
+      color='primary'
+      p={3}
+      fontSize={[1, 2, 3]}
+      border='primary'
+    >
+      Box Component
+    </Box>
+  </Story>
+</Preview>

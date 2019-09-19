@@ -5,7 +5,7 @@ const colors = {
     slateGrey: '#383E54',
     endpointBlue: '#0084B4',
     turquoise: '#00A7B4',
-    paleGrey: '#F4F5F7'
+    paleGrey: '#F4F5F7',
   },
   secondary: {
     watermelon: '#ED5564',
@@ -18,15 +18,15 @@ const colors = {
     stone: '#858585',
     smoke: '#A2A2A2',
     doveGrey: '#C5C5C5',
-    cloud: '#F0F0F0'
+    cloud: '#F0F0F0',
   },
   white: '#fff',
-  black: '#000'
+  black: '#000',
 };
 
 const {
   primary: { endpointBlue, turquoise, slateGrey },
-  white
+  white,
   // code: { func, keyword, background, comment, operator, string, punctuation }
 } = colors;
 
@@ -52,13 +52,14 @@ const {
 
 export default {
   borders: {
+    // Need to redo or modify in component as variant
     primary: `1px solid ${endpointBlue}`,
     secondary: `1px solid ${turquoise}`,
-    tertiary: `1px solid ${slateGrey}`
+    tertiary: `1px solid ${slateGrey}`,
   },
   bg: {
     primary: endpointBlue,
-    secondary: turquoise
+    secondary: turquoise,
   },
   // breakpoints: ['32em', '48em', '64em'],
   breakpoints: ['768px'],
@@ -70,13 +71,13 @@ export default {
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
-    monospace: 'Menlo, monospace'
+    monospace: 'Menlo, monospace',
   },
   fontSizes: [14, 18, 22, 26, 28, 36, 48, 64],
   fontWeights: {
     body: 400,
     heading: 700,
-    bold: 700
+    bold: 700,
   },
   colors: {
     text: '#000',
@@ -98,20 +99,20 @@ export default {
         primary: '#0cf',
         secondary: '#f0e',
         gray: '#222',
-        lightgray: '#111'
-      }
-    }
+        lightgray: '#111',
+      },
+    },
   },
   lineHeights: {
     solid: 1,
     heading: 1.25,
-    body: 1.5
+    body: 1.5,
   },
   letterSpacings: {
     normal: 'normal',
     tracked: '0.1em',
     tight: '-0.05em',
-    mega: '0.25em'
+    mega: '0.25em',
   },
   space: [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512],
   radii: [0, 2, 4, 16, 9999, '100%'],
@@ -119,6 +120,6 @@ export default {
   heights: [16, 32, 64, 128, 256],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],
   holyGrail: {
-    panel: '16em'
-  }
+    panel: '16em',
+  },
 };
