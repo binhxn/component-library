@@ -13,6 +13,7 @@ const Menu = styled.nav`
 
 Menu.Item = styled.button.attrs({ type: 'button' })`
   appearance: none;
+  -webkit-appearance: none;
   border: none;
   cursor: pointer;
   display: block;
@@ -46,7 +47,7 @@ Menu.Item = styled.button.attrs({ type: 'button' })`
       },
       active: {
         bg: 'primary.0',
-        color: 'white',
+        color: 'white.0',
         '&:visited': {
           color: 'white.0',
         },
