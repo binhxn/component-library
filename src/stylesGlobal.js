@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 // Create global CSS - acts as base css
 export default createGlobalStyle`
-  html {
-    box-sizing: border-box;
-  }
-
   body {
     margin: 0;
     padding: 0;
@@ -13,7 +9,7 @@ export default createGlobalStyle`
   *,
 	*:before,
 	*:after {
- 		box-sizing: inherit;
+ 		box-sizing: border-box;
 	}
 
   h1, h2, h3, h4, p {

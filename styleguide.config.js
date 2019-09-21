@@ -39,6 +39,7 @@ module.exports = {
         path.resolve(__dirname, 'src/components/Grid', 'index.js'),
         path.resolve(__dirname, 'src/components/Layout', 'index.js'),
         path.resolve(__dirname, 'src/components/Link', 'index.js'),
+        path.resolve(__dirname, 'src/components/Menu', 'index.js'),
         path.resolve(__dirname, 'src/components/Text', 'index.js'),
         path.resolve(__dirname, 'src/components/NavTab', 'index.js'),
         path.resolve(__dirname, 'src/components/NavUnderline', 'index.js'),

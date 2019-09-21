@@ -8,6 +8,7 @@ import Flex from './components/Flex';
 import Grid from './components/Grid';
 import Layout from './components/Layout';
 import Link from './components/Link';
+import Menu from './components/Menu';
 import NavTab from './components/NavTab';
 import NavUnderline from './components/NavUnderline';
 import Text from './components/Text';
@@ -24,8 +25,9 @@ export {
   Grid,
   Layout,
   Link,
+  Menu,
   NavTab,
   NavUnderline,
   Text,
-  theme
+  theme,
 };
