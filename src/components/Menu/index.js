@@ -11,9 +11,8 @@ const Menu = styled.nav`
   ${color}
 `;
 
-Menu.Item = styled.button.attrs({ type: 'button' })`
+Menu.Item = styled.button`
   appearance: none;
-  -webkit-appearance: none;
   border: none;
   cursor: pointer;
   display: block;
@@ -60,8 +59,6 @@ Menu.Item = styled.button.attrs({ type: 'button' })`
 
 Menu.propTypes = {
   /** `primary`, `secondary`, `tertiary` */
-  borders: PropTypes.string,
-  /** `primary`, `secondary`, `tertiary` */
   colors: PropTypes.string,
   /** i.e. 1/3 or [1, 1/2, 1/3] for responsiveness */
   width: PropTypes.oneOfType([
@@ -69,14 +66,10 @@ Menu.propTypes = {
     PropTypes.number,
     PropTypes.string,
   ]),
-  /** i.e. 1, '1', or [1, 2, 3] for responsiveness */
-  fontSize: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.number,
-    PropTypes.string,
-  ]),
   /** padding - i.e. 1, '1', or [1, 2, 3] for responsiveness */
   p: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string]),
+  /** marging - i.e. 1, '1', or [1, 2, 3] for responsiveness */
+  m: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string]),
 };
 
 Menu.Item.defaultProps = {
