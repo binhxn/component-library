@@ -1,3 +1,6 @@
+// This component was made specifically for a left-side panel
+// for Gatsby documentation center;
+
 import styled from 'styled-components';
 import { space, layout, color, typography, variant } from 'styled-system';
 import PropTypes from 'prop-types';
@@ -12,7 +15,6 @@ const Menu = styled.nav`
 `;
 
 Menu.Item = styled.button`
-  appearance: none;
   border: none;
   cursor: pointer;
   display: block;
@@ -23,6 +25,14 @@ Menu.Item = styled.button`
   padding: 10px 20px;
   text-align: left;
   width: 100%;
+
+  /**
+    * Disable browser default styles,
+    * especially on Gatsby's Link component
+    */
+  &[type='button'] {
+    appearance: none;
+  }
 
   /* Disable anchor styles */
   &:visited {
