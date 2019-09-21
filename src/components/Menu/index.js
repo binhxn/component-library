@@ -14,32 +14,41 @@ const Menu = styled.nav`
 Menu.Item = styled.button.attrs({ type: 'button' })`
   border: none;
   cursor: pointer;
+  display: block;
   font-size: ${themeGet('fontSizes.0')}px;
-  outline: none;
+  outline: 1px solid transparent;
   outline-offset: -1px;
+  text-decoration: none;
   padding: 10px 20px;
   text-align: left;
   width: 100%;
 
-  &:focus {
-    outline: 1px solid ${themeGet('colors.tertiary.1')};
-  }
-
-  &:hover {
-    background: ${themeGet('colors.tertiary.1')};
-  }
-
-  &:active {
-    background: ${themeGet('colors.tertiary.2')};
+  /* Disable anchor styles */
+  &:visited {
+    color: initial;
   }
 
   /* @prop - variant */
+  /* variants only get value from themes */
   ${variant({
     variants: {
+      normal: {
+        '&:active': {
+          bg: 'tertiary.2',
+        },
+        '&:hover': {
+          bg: 'tertiary.1',
+        },
+        '&:focus': {
+          outline: 'primary', // custom theme prop
+        },
+      },
       active: {
         bg: 'primary.0',
-        border: 'none',
-        color: 'white.0',
+        color: 'white',
+        '&:visited': {
+          color: 'white.0',
+        },
       },
     },
   })}
@@ -66,6 +75,10 @@ Menu.propTypes = {
   ]),
   /** padding - i.e. 1, '1', or [1, 2, 3] for responsiveness */
   p: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string]),
+};
+
+Menu.Item.defaultProps = {
+  variant: 'normal',
 };
 
 /** @component */

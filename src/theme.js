@@ -57,6 +57,11 @@ export default {
     secondary: `1px solid ${turquoise}`,
     tertiary: `1px solid ${slateGrey}`,
   },
+  outline: {
+    primary: `1px solid ${endpointBlue}`,
+    secondary: `1px solid ${turquoise}`,
+    tertiary: `1px solid ${slateGrey}`,
+  },
   bg: {
     primary: endpointBlue,
     secondary: turquoise,

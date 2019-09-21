@@ -4,23 +4,14 @@ Values are fixed on this component due to the narrow visual aspects of it. It wi
 
 ```js
 <Menu>
-  <Menu.Item>Menu Component 1</Menu.Item>
-  <Menu.Item>Menu Component 2</Menu.Item>
-</Menu>;
-{
-  /*
-
-Below is a reference to object-styled responsive units
-
-<Box
-  fontFamily='body'
-  color='primary'
-  p={3}
-  width={{ sm: 1, md: 1/2, lg: 1/3}}
-  fontSize={{ sm: 1, md: 2, lg: 3}}
->
-  Box Component
-</Box>
-*/
-}
+  <Menu.Item variant='normal' as='a' href='#'>
+    Menu Component 1
+  </Menu.Item>
+  <Menu.Item variant='active' as='a' href='#'>
+    Menu Component 2
+  </Menu.Item>
+  <Menu.Item as='a' href='#'>
+    Menu Component 3
+  </Menu.Item>
+</Menu>
 ```
