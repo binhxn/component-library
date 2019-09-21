@@ -12,6 +12,7 @@ const Menu = styled.nav`
 `;
 
 Menu.Item = styled.button.attrs({ type: 'button' })`
+  appearance: none;
   border: none;
   cursor: pointer;
   display: block;
