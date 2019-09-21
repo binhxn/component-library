@@ -4,8 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 import PropTypes from 'prop-types';
 
 const Link = styled.a.attrs({ role: 'link' })`
-  ${typography}
-
+  font-size: ${themeGet('fontSizes.1')}px;
   font-family: ${themeGet('fonts.body', 'sans-serif')};
   text-decoration: none;
   border-bottom: 1px solid;
@@ -39,14 +38,15 @@ const Link = styled.a.attrs({ role: 'link' })`
 
   &:active {
     color: ${({ color }) => themeGet(`colors.${color}.1`)};
-}
+  }
+
+  ${typography}
 `;
 
 Link.defaultProps = {
   as: 'a',
   underline: false,
   color: 'primary',
-  fontSize: 2
 };
 
 Link.propTypes = {
@@ -60,10 +60,10 @@ Link.propTypes = {
   fontSize: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.number,
-    PropTypes.string
+    PropTypes.string,
   ]),
   /** Adds underline to the link */
-  underline: PropTypes.bool
+  underline: PropTypes.bool,
 };
 
 /** @component */
