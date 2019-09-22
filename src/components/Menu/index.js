@@ -22,7 +22,7 @@ Menu.Item = styled.button`
   outline: 1px solid transparent;
   outline-offset: -1px;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: ${themeGet('space.2')}px ${themeGet('space.4')}px;
   text-align: left;
   width: 100%;
 
