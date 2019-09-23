@@ -16,7 +16,6 @@ const Menu = styled.nav`
 
 Menu.Item = styled.button`
   border: none;
-  color: ${themeGet('colors.text')};
   cursor: pointer;
   display: block;
   font-size: ${themeGet('fontSizes.0')}px;
@@ -39,6 +38,7 @@ Menu.Item = styled.button`
   ${variant({
     variants: {
       normal: {
+        color: 'text',
         '&:active': {
           color: 'text',
           bg: 'tertiary.2',
