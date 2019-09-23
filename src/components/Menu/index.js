@@ -33,11 +33,6 @@ Menu.Item = styled.button`
     appearance: none;
   }
 
-  /* Disable anchor styles */
-  &:visited {
-    color: initial;
-  }
-
   /* @prop - variant */
   /* variants only get value from themes */
   ${variant({
@@ -50,7 +45,11 @@ Menu.Item = styled.button`
           bg: 'tertiary.1',
         },
         '&:focus': {
+          color: 'initial',
           outline: 'primary', // custom theme prop
+        },
+        '&:visited': {
+          color: 'initial',
         },
       },
       active: {
