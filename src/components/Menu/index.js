@@ -16,6 +16,7 @@ const Menu = styled.nav`
 
 Menu.Item = styled.button`
   border: none;
+  color: ${themeGet('colors.text')};
   cursor: pointer;
   display: block;
   font-size: ${themeGet('fontSizes.0')}px;
@@ -39,17 +40,18 @@ Menu.Item = styled.button`
     variants: {
       normal: {
         '&:active': {
+          color: 'text',
           bg: 'tertiary.2',
         },
         '&:hover': {
           bg: 'tertiary.1',
         },
         '&:focus': {
-          color: 'initial',
+          color: 'text',
           outline: 'primary', // custom theme prop
         },
         '&:visited': {
-          color: 'initial',
+          color: 'text',
         },
       },
       active: {
