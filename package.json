@@ -29,7 +29,6 @@
     "guide:build": "styleguidist build",
     "sb": "start-storybook -p 4000",
     "rollup": "rm -rf dist && rollup -c",
-    "publish": "yarn rollup && npm publish",
     "commit": "git-cz",
     "release": "semantic-release"
   },
