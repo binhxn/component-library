@@ -33,6 +33,11 @@
     "commit": "git-cz",
     "release": "semantic-release"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
