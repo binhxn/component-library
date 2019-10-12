@@ -1,0 +1,28 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:11
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn test
+      - run:
+          name: Bundle library with Rollup
+          command: yarn rollup
+      - run:
+          name: Publish package
+          command: '[ $CIRCLE_BRANCH = "master" ] && yarn release'

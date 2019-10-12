@@ -29,7 +29,9 @@
     "guide:build": "styleguidist build",
     "sb": "start-storybook -p 4000",
     "rollup": "rm -rf dist && rollup -c",
-    "publish": "yarn rollup && npm publish"
+    "publish": "yarn rollup && npm publish",
+    "commit": "git-cz",
+    "release": "semantic-release"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,6 +60,8 @@
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
     "babel-loader": "^8.0.6",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "react-styleguidist": "^9.1.16",
     "rollup": "^1.21.2",
     "rollup-plugin-babel": "^4.3.3",
